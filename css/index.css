@@ -1,0 +1,33 @@
+@import '/css/btnIndex.css';
+@import '/css/btnLight.css';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #333;
+	min-height: 100vh;
+}
+
+.blockBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.block1, .block2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a:link, a:visited,  a:hover, a:active
+{
+    text-decoration: none;
+}

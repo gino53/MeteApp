@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <script src="https://kit.fontawesome.com/5714947897.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="btnLight">
+        <strong>☀️</strong>
+        <strong>🌙</strong>
+    </div>
+    <div class="blockBtn">
+        <div class="block1">
+            <a href="calculator.html">
+                <div class="btn">
+                    <i class="fa-solid fa-calculator fa-3x"></i>
+                </div>
+            </a>
+            <a href="bulb.html">
+                <div class="btn">
+                    <i class="fa-regular fa-lightbulb fa-3x"></i>
+                </div>
+            </a>
+        </div>
+        <div class="block2">
+            <a href="game.html">
+                <div class="btn">
+                    <i class="fa-solid fa-gamepad fa-3x"></i>
+                </div>
+            </a>
+            <a href="bulb.html">
+                <div class="btn">
+                    <i class="fa-regular fa-lightbulb fa-3x"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script>
+        let body = document.querySelector('body');
+        let btnLight = document.querySelector('.btnLight');
+        btnLight.onclick = function () {
+            body.classList.toggle('light')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+@import '/css/btn.css';
+@import '/css/btnLight.css';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #333;
+	min-height: 100vh;
+}
+
+body.light {
+	background: #f8f8f8;
+}
+
+canvas {
+	display: block;
+	margin: 0 auto;
+	background: #333;
+	border: 0.25rem solid #f8f8f8;
+	border-radius: 5%;
+}
+
+body.light canvas {
+	background: #f8f8f8;
+	border: 0.25rem solid #333;
+}

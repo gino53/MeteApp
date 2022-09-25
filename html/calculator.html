@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="/css/calculator.css">
+	<script src="https://kit.fontawesome.com/5714947897.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="btnLight">
+		<strong>☀️</strong>
+		<strong>🌙</strong>
+	</div>
+	<a href="index.html">
+		<div class="btn">
+			<i class="fa-solid fa-house fa-xl"></i>
+		</div>
+	</a>
+	<a href="game.html">
+		<div class="btn2">
+			<i class="fa-solid fa-gamepad fa-xl"></i>
+		</div>
+	</a>
+	<a href="bulb.html">
+		<div class="btn3">
+			<i class="fa-regular fa-lightbulb fa-xl"></i>
+		</div>
+	</a>
+	<div class="container">
+		<form class="calculator" name="calc">
+			<input type="text" class="value" readonLy name="txt">
+			<span class="num clear" onclick="calc.txt.value=''"><i>C</i></span>
+			<span class="num" onclick="calc.txt.value+='/'"><i>/</i></span>
+			<span class="num" onclick="calc.txt.value+='*'"><i>*</i></span>
+			<span class="num" onclick="calc.txt.value+='7'"><i>7</i></span>
+			<span class="num" onclick="calc.txt.value+='8'"><i>8</i></span>
+			<span class="num" onclick="calc.txt.value+='9'"><i>9</i></span>
+			<span class="num" onclick="calc.txt.value+='-'"><i>-</i></span>
+			<span class="num" onclick="calc.txt.value+='4'"><i>4</i></span>
+			<span class="num" onclick="calc.txt.value+='5'"><i>5</i></span>
+			<span class="num" onclick="calc.txt.value+='6'"><i>6</i></span>
+			<span class="num plus" onclick="calc.txt.value+='+'"><i>+</i></span>
+			<span class="num" onclick="calc.txt.value+='1'"><i>1</i></span>
+			<span class="num" onclick="calc.txt.value+='2'"><i>2</i></span>
+			<span class="num" onclick="calc.txt.value+='3'"><i>3</i></span>
+			<span class="num" onclick="calc.txt.value+='0'"><i>0</i></span>
+			<span class="num" onclick="calc.txt.value+='00'"><i>00</i></span>
+			<span class="num" onclick="calc.txt.value+='.'"><i>.</i></span>
+			<span class="num equal" onclick="document.calc.txt.value=eval(calc.txt.value)"><i>=</i></span>
+		</form>
+	</div>
+	<script>
+		let body = document.querySelector('body');
+		let btnLight = document.querySelector('.btnLight');
+		btnLight.onclick = function () {
+			body.classList.toggle('light')
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+.btnLight {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 60px;
+	height: 60px;
+	background: #333;
+	font-size: 1.5em;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25),
+		5px 5px 30px rgba(0, 0, 0, 0.25),
+		inset -2px -2px 5px rgba(0, 0, 0, 0.25),
+		inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+body.light .btnLight {
+	background: #fafafa;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
+		5px 5px 30px rgba(0, 0, 0, 0.05),
+		inset -2px -2px 5px rgba(0, 0, 0, 0.1),
+		inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.btnLight strong {
+	display: none;
+}
+
+.btnLight strong:nth-child(1) {
+	display: block;
+}
+
+body.light .btnLight strong:nth-child(1) {
+	display: none;
+}
+
+body.light .btnLight strong:nth-child(2) {
+	display: block;
+}
