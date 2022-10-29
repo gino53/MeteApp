@@ -31,3 +31,52 @@ a:link, a:visited,  a:hover, a:active
 {
     text-decoration: none;
 }
+
+a 
+{
+	position: relative;
+	width: 208px;
+	height: 208px;
+	margin: 5px;
+	background: #333;
+	border-radius: 10px;
+	overflow: hidden;
+}
+a::before 
+{
+	content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 208px;
+	height: 208px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent, #DBBDFF, #DBBDFF);
+	animation: animate 6s linear infinite;
+}
+a::after 
+{
+	content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 208px;
+	height: 208px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent, #BDF1FF, #BDF1FF);
+	animation: animate 6s linear infinite;
+	animation-delay: -3s;
+}
+@keyframes animate 
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
