@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <title>Menu</title>
     <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5714947897.js" crossorigin="anonymous"></script>
 </head>
 
@@ -13,38 +16,38 @@
         <strong>☀️</strong>
         <strong>🌙</strong>
     </div>
-    <div class="blockBtn">
-        <div class="block1">
-            <a href="calculator.html">
-                <div class="btn">
-                    <i class="fa-solid fa-calculator fa-3x"></i>
-                </div>
-            </a>
-            <a href="météo.html">
-                <div class="btn">
-                    <i class="fa-solid fa-cloud-sun-rain fa-3x"></i>
-                </div>
-            </a>
-        </div>
-        <div class="block2">
-            <a href="game.html">
-                <div class="btn">
-                    <i class="fa-solid fa-gamepad fa-3x"></i>
-                </div>
-            </a>
-            <a href="bulb.html">
-                <div class="btn">
-                    <i class="fa-regular fa-lightbulb fa-3x"></i>
-                </div>
-            </a>
-        </div>
+    <div class="container__Btn">
+        <a href="calculator.html">
+            <div class="btn">
+                <i class="fa-solid fa-calculator fa-3x"></i>
+                <span class="name" id="calculator">Calculator</span>
+            </div>
+            <img src="/images/dark-mode/white-calculator.png" alt="" class="img__math" id="img__math">
+        </a>
+        <a href="météo.html">
+            <div class="btn">
+                <i class="fa-solid fa-cloud-sun-rain fa-3x"></i>
+                <span class="name" id="weather">Weather</span>
+            </div>
+            <img src="/images/dark-mode/white-weather.png" alt="" class="img__weather" id="img__weather">
+        </a>
+        <a href="game.html">
+            <div class="btn">
+                <i class="fa-solid fa-gamepad fa-3x"></i>
+                <span class="name" id="game">Game</span>
+            </div>
+            <img src="/images/dark-mode/white-game.png" alt="" class="img__game" id="img__game">
+        </a>
     </div>
+    <script src="/js/light-mode.js"></script>
+    <script type="text/javascript" src="/js/vanilla-tilt.js"></script>
     <script>
-        let body = document.querySelector('body');
-        let btnLight = document.querySelector('.btnLight');
-        btnLight.onclick = function () {
-            body.classList.toggle('light')
-        }
+        VanillaTilt.init(document.querySelectorAll(".btn"), {
+            max: 30,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5,
+        });
     </script>
 </body>
 

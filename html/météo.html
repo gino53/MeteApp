@@ -10,58 +10,54 @@
 
 <body>
     <div class="btnLight">
-		<strong>☀️</strong>
-		<strong>🌙</strong>
-	</div>
+        <strong>☀️</strong>
+        <strong>🌙</strong>
+    </div>
     <a href="index.html">
-		<div class="btn">
-			<i class="fa-solid fa-house fa-xl"></i>
-		</div>
-	</a>
+        <div class="btn">
+            <i class="fa-solid fa-house fa-xl"></i>
+        </div>
+    </a>
     <a href="calculator.html">
-		<div class="btn2">
-			<i class="fa-solid fa-calculator fa-xl"></i>
-		</div>
-	</a>
-	<a href="game.html">
-		<div class="btn3">
-			<i class="fa-solid fa-gamepad fa-xl"></i>
-		</div>
-	</a>
-	<a href="bulb.html">
-		<div class="btn4">
-			<i class="fa-regular fa-lightbulb fa-xl"></i>
-		</div>
-	</a>
-    <div class="container">
-        <div class="row justify-content-center">
-            <form>
-                <input type="text" id="inputCity" placeholder="Ville">
-                <button type="submit">
-                    Rechercher
-                </button>
-            </form>
-            <div>
-                <div class="box-container">
-                    <div id="city" class="box"></div>
-                    <div id="icon" class="box"></div>
-                    <div id="desc" class="box"></div>
-                    <div id="temp" class="box"></div>
-                    <div id="humi" class="box"></div>
-                    <div id="wind" class="box"></div>
-                </div>
+        <div class="btn2">
+            <i class="fa-solid fa-calculator fa-xl"></i>
+        </div>
+    </a>
+    <a href="game.html">
+        <div class="btn3">
+            <i class="fa-solid fa-gamepad fa-xl"></i>
+        </div>
+    </a>
+    <a href="bulb.html">
+        <div class="btn4">
+            <i class="fa-regular fa-lightbulb fa-xl"></i>
+        </div>
+    </a>
+    <form>
+        <input type="text" id="inputCity" placeholder="Ville">
+        <button type="submit">
+            Rechercher
+        </button>
+        <div>
+            <div class="box-container">
+                <div id="city" class="box"></div>
+                <div id="icon" class="box"></div>
+                <div id="desc" class="box"></div>
+                <div id="temp" class="box"></div>
+                <div id="humi" class="box"></div>
+                <div id="wind" class="box"></div>
             </div>
         </div>
-    </div>
+    </form>
 
     <script src="/js/app.js"></script>
     <script>
-		let body = document.querySelector('body');
-		let btnLight = document.querySelector('.btnLight');
-		btnLight.onclick = function () {
-			body.classList.toggle('light')
-		}
-	</script>
+        let body = document.querySelector('body');
+        let btnLight = document.querySelector('.btnLight');
+        btnLight.onclick = function () {
+            body.classList.toggle('light')
+        }
+    </script>
 </body>
 
 </html>

@@ -16,6 +16,11 @@
 	user-select: none;
 	cursor: pointer;
 	border-radius: 10px;
+	transition: 0.5s;
+}
+
+.btnLight:hover {
+	transform: scale(110%);
 }
 
 body.light .btnLight {
