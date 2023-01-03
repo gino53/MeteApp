@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+	text-decoration: none;
+	list-style: none;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #333;
+	min-height: 100vh;
+	transition: 0.5s;
+	overflow: hidden;
+}

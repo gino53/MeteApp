@@ -1,48 +1,37 @@
-.btnLight {
+.theme__btn {
 	position: absolute;
-	top: 20px;
-	right: 20px;
-	width: 60px;
-	height: 60px;
-	background: #333;
-	font-size: 1.5em;
-	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25),
-		5px 5px 30px rgba(0, 0, 0, 0.25),
-		inset -2px -2px 5px rgba(0, 0, 0, 0.25),
-		inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+	top: 1.25rem;
+	right: 1.25rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	user-select: none;
+	width: 60px;
+	height: 60px;
+	font-size: 1.5em;
 	cursor: pointer;
-	border-radius: 10px;
+	border-radius: 0.625rem;
 	transition: 0.5s;
 }
 
-.btnLight:hover {
+.theme__btn:hover {
 	transform: scale(110%);
 }
 
-body.light .btnLight {
-	background: #fafafa;
-	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
-		5px 5px 30px rgba(0, 0, 0, 0.05),
-		inset -2px -2px 5px rgba(0, 0, 0, 0.1),
-		inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+.theme__btn strong {
+	position: inherit;
+	opacity: 0;
+	height: 1.5rem;
+	transition: 0.5s;
 }
 
-.btnLight strong {
-	display: none;
+.theme__btn strong:nth-child(1) {
+	opacity: 1;
 }
 
-.btnLight strong:nth-child(1) {
-	display: block;
+body.light .theme__btn strong:nth-child(1) {
+	opacity: 0;
 }
 
-body.light .btnLight strong:nth-child(1) {
-	display: none;
-}
-
-body.light .btnLight strong:nth-child(2) {
-	display: block;
+body.light .theme__btn strong:nth-child(2) {
+	opacity: 1;
 }
