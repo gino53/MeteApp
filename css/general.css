@@ -16,3 +16,14 @@ body {
 	transition: 0.5s;
 	overflow: hidden;
 }
+
+/*=============== LIGHT MODE ===============*/
+
+body.light,
+body.light .btn {
+	color: #333;
+}
+
+body.light {
+	background: #fafafa;
+}

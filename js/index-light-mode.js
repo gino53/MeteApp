@@ -1,18 +1,24 @@
 const toggleBtn = document.querySelector('.theme__btn');
 const body = document.querySelector('body');
 let lightMode = localStorage.getItem('light-mode');
-const img = document.querySelector('img');
+const img__math = document.getElementById('img__math');
+const img__weather = document.getElementById('img__weather');
+const img__game = document.getElementById('img__game');
 
 const enableLightMode = () => {
     body.classList.add('light');
     localStorage.setItem('light-mode', 'enabled');
-    img.setAttribute('src', '/images/light-mode/dark-math.png');
+    img__math.setAttribute('src', '/images/light-mode/dark-calculator.png');
+    img__weather.setAttribute('src', '/images/light-mode/dark-weather.png');
+    img__game.setAttribute('src', '/images/light-mode/dark-game.png');
 };
 
 const disableLightMode = () => {
     body.classList.remove('light');
     localStorage.setItem('light-mode', 'disabled');
-    img.setAttribute('src', '/images/dark-mode/white-math.png');
+    img__math.setAttribute('src', '/images/dark-mode/white-calculator.png');
+    img__weather.setAttribute("src", '/images/dark-mode/white-weather.png');
+    img__game.setAttribute('src', '/images/dark-mode/white-game.png');
 };
 
 if (lightMode === 'enabled') {

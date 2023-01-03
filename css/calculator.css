@@ -1,143 +1,190 @@
-@import '/css/btnLight.css';
+@import '/css/general.css';
+@import '/css/theme__btn.css';
 @import '/css/btn.css';
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: consolas;
-	transition: all 0.5s;
-}
-
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: #333;
-}
-
-body.light {
-	background: #f8f8f8;
+img {
+	position: absolute;
+	width: 1000px;
+	height: 1200px;
+	z-index: -1;
 }
 
 .container {
 	position: relative;
-	min-width: 300px;
-	min-height: 400px;
-	background: #333;
-	padding: 40px 30px 30px;
-	border-radius: 20px;
-	box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.25),
-		10px 10px 75px rgba(0, 0, 0, 0.25),
-		inset -5px -5px 15px rgba(0, 0, 0, 0.5),
-		inset 5px 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-body.light .container {
-	background: #fafafa;
-	box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.15),
-		10px 10px 75px rgba(0, 0, 0, 0.15),
-		inset -5px -5px 15px rgba(0, 0, 0, 0.15),
-		inset 5px 5px 15px rgba(0, 0, 0, 0.05);
+	width: 90%;
+	max-width: 480px;
+	min-height: 80%;
+	padding: 2.5rem 1.875rem 1.875rem;
+	border-radius: 1.25rem;
+	border-top: 1px solid rgba(255, 255, 255, .3);
+	border-left: 1px solid rgba(255, 255, 255, .3);
+	background-color: rgba(255, 255, 255, .3);
+	box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	-moz-backdrop-filter: blur(10px);
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+	transition: 0.5s ease-out;
 }
 
 .calculator {
 	position: relative;
 	display: grid;
+	align-items: center;
 }
 
 .calculator .value {
 	position: relative;
+	left: 0.625rem;
 	grid-column: span 4;
-	height: 100px;
-	left: 10px;
 	width: calc(100% - 20px);
+	height: 100px;
+	margin-bottom: 1rem;
+	padding: 0.625rem;
 	border: none;
 	outline: none;
-	background: #a7af7c;
-	margin-bottom: 10px;
-	border-radius: 10px;
-	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+	background: none;
+	box-shadow: 0 2px 0 0 #fff;
 	text-align: right;
-	padding: 10px;
 	font-size: 2em;
+	color: #fff;
+	transition: 2s;
 }
 
-.calculator span {
+::placeholder {
+	color: rgb(224, 223, 223);
+	transition: 0.5s;
+}
+
+::selection {
+	background-color: rgba(255, 255, 255, .3);
+}
+
+.calculator .touch {
 	position: relative;
-	display: grid;
-	place-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	width: 80px;
 	height: 80px;
-	margin: 8px;
-	background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
-	box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
-		inset 0 -8px 8px rgba(0, 0, 0, 0.25),
-		0 0 0 2px rgba(0, 0, 0, 0.75),
-		10px 20px 25px rgba(0, 0, 0, 0.4);
+	margin: 0.5rem;
+	border-radius: 0.625rem;
+	place-items: center;
+	border-top: 1px solid rgba(255, 255, 255, .3);
+	border-left: 1px solid rgba(255, 255, 255, .3);
+	background-color: rgba(255, 255, 255, .3);
+	box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	-moz-backdrop-filter: blur(10px);
 	color: #fff;
-	user-select: none;
-	cursor: pointer;
 	font-weight: bolder;
-	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.5s;
 }
 
-body.light .calculator span {
-	background: linear-gradient(180deg, #fafafa, #f4f4f4);
-	box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
-		inset 0 -8px 8px rgba(0, 0, 0, 0.15),
-		0 0 0 2px rgba(0, 0, 0, 0.1),
-		10px 20px 25px rgba(0, 0, 0, 0.25);
+.calculator .touch:hover {
+	transform: scale(110%);
 }
 
-.calculator span::before {
-	content: '';
-	position: absolute;
-	top: 3px;
-	left: 4px;
-	bottom: 14px;
-	right: 12px;
-	background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
-	border-radius: 10px;
-	box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
-		10px 5px 10px rgba(0, 0, 0, 0.15);
-	border-left: 1px solid #0004;
-	border-bottom: 1px solid #0004;
-	border-top: 1px solid #0009;
-}
-
-body.light .calculator span::before {
-	background: linear-gradient(90deg, #e6e6e6, #efefef);
-	border-radius: 10px;
-	box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25),
-		10px 5px 10px rgba(0, 0, 0, 0.15);
-	border-left: 1px solid #fff4;
-	border-bottom: 1px solid #fff4;
-	border-top: 1px solid #fff9;
-}
-
-.calculator span:active {
-	filter: brightness(1.5);
-}
-
-body.light .calculator span:active {
-	filter: brightness(0.9);
-}
-
-.calculator span i {
-	position: relative;
+.calculator .touch i {
+	position: inherit;
 	font-style: normal;
 	font-size: 1.5em;
-	text-transform: uppercase;
+	transition: 0.5s;
 }
 
-body.light .calculator span i {
+.calculator .touch:hover i {
+	transform: translateY(-20px);
+}
+
+h4 {
+	margin-top: -20px;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.calculator .touch:hover h4 {
+	opacity: 1;
+}
+
+.calculator .plus {
+	grid-row: span 2;
+	height: 180px;
+}
+
+.container__brackets.active .icon__brackets__touch,
+.container__brackets:hover.active .name__brackets,
+.container__brackets.active .name__brackets {
+	opacity: 0;
+}
+
+.div__brackets {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
+	margin-top: -80px;
+	opacity: 0;
+	transition: margin-top 0.5s;
+}
+
+.container__brackets.active .div__brackets {
+	opacity: 1;
+	margin-top: -40px;
+	z-index: 1;
+}
+
+.container__brackets.active .div__brackets .brackets {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+	font-size: x-large;
+	transition: 0.5s;
+}
+
+.brackets:hover {
+	transform: scale(150%);
+}
+
+.container__brackets:hover.active .icon__brackets {
+	transform: none;
+}
+
+.separation {
+	width: 4px;
+	margin-top: 6px;
+	border-radius: 1.625rem;
+	background: #fff;
+	transition: 2s;
+}
+
+/*=============== LIGHT MODE ===============*/
+
+body.light .calculator .value {
+	color: #333;
+	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.75);
+}
+
+body.light ::placeholder {
+	color: #757575;
+}
+
+body.light ::selection {
+	background-color: rgba(78, 76, 76, 0.3);
+}
+
+body.light .calculator .touch {
 	color: #333;
 }
 
-body.light .calculator span.clear i,
-body.light .calculator span.equal i {
+body.light .calculator .touch.clear,
+body.light .calculator .touch.equal {
 	color: #fff;
 }
 
@@ -156,11 +203,6 @@ body.light .calculator .clear::before,
 	border-top: 1px solid #fff4;
 }
 
-.calculator .plus {
-	grid-row: span 2;
-	height: 180px;
-}
-
 body.light .calculator .equal,
 .calculator .equal {
 	background: #2196f3;
@@ -174,6 +216,7 @@ body.light .calculator .equal::before,
 	border-top: 1px solid #fff4;
 }
 
- .calculator span:hover {
-	transform: scale(110%);
+body.light .separation {
+	background: #333;
+	transition: 2s;
 }

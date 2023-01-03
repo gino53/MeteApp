@@ -1,5 +1,5 @@
-@import '/css/btnLight.css';
 @import '/css/general.css';
+@import '/css/theme__btn.css';
 
 .container__btn {
 	display: flex;
@@ -11,14 +11,6 @@ a {
 	width: 208px;
 	height: 208px;
 	margin: 2rem;
-}
-
-a:hover i {
-	transform: translateY(-20px);
-}
-
-a:hover .name {
-	opacity: 1;
 }
 
 .btn {
@@ -50,6 +42,10 @@ i {
 	transition: 0.5s;
 }
 
+a:hover i {
+	transform: translateY(-20px);
+}
+
 .name {
 	margin-top: 60px;
 	font-family: 'Nunito', sans-serif;
@@ -60,6 +56,10 @@ i {
 
 #game {
 	margin-top: 50px;
+}
+
+a:hover .name {
+	opacity: 1;
 }
 
 .img__math,
@@ -85,17 +85,6 @@ i {
 	bottom: -80px;
 	left: -70px;
 	transform: rotate(35deg);
-}
-
-/*=============== LIGHT MODE ===============*/
-
-body.light,
-body.light .btn {
-	color: #333;
-}
-
-body.light {
-	background: #fafafa;
 }
 
 /*=============== MEDIA SCREEN ===============*/

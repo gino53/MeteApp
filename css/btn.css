@@ -1,4 +1,4 @@
-.btn, .btn2, .btn3, .btn4 {
+.btn, .btn2, .btn3 {
 	position: absolute;
 	top: 100px;
 	left: 20px;
@@ -26,11 +26,7 @@
 	top: 400px;
 }
 
-.btn4 {
-	top: 550px;
-}
-
-body.light .btn, body.light .btn2, body.light .btn3, body.light .btn4 {
+body.light .btn, body.light .btn2, body.light .btn3 {
 	background: #fafafa;
 	color: #333;
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
@@ -43,6 +39,6 @@ body.light .btn, body.light .btn2, body.light .btn3, body.light .btn4 {
 	color: plum;
 }
 
-body.light .btn:hover, body.light .btn2:hover, body.light .btn3:hover, body.light .btn4:hover {
+body.light .btn:hover, body.light .btn2:hover, body.light .btn3:hover {
 	color: plum;
 }

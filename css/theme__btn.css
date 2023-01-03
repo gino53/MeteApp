@@ -14,7 +14,7 @@
 }
 
 .theme__btn:hover {
-	transform: scale(110%);
+	transform: rotate(360deg);
 }
 
 .theme__btn strong {
