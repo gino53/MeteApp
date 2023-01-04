@@ -1,27 +1,15 @@
-@import '/css/btnLight.css';
+@import '/css/general.css';
+@import '/css/theme__btn.css';
 @import '/css/btn.css';
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.5s;
-}
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(/images/night.jpg);
+    background: url(/images/dark-mode/night.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
-}
-
-body.light {
-	background: url(/images/daytime.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 form {
@@ -39,18 +27,21 @@ input {
     width: 80%;
     max-width: 600px;
     height: 40px;
-    background: #333;
-    color: #fafafa;
+    color: #fff;
     padding-left: 10px;
     border: none;
     outline: none;
-    font-size: 1.5em;
+    border-radius: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    background-color: rgba(255, 255, 255, .3);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25),
-        5px 5px 30px rgba(0, 0, 0, 0.25),
-        inset -2px -2px 5px rgba(0, 0, 0, 0.25),
-        inset 2px 2px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    font-size: 1.5em;
 }
 
 button {
@@ -62,7 +53,7 @@ button {
     height: 50px;
     margin: 1rem;
     background: #333;
-    color: #fafafa;
+    color: #fff;
     border: none;
     font-size: 1.5em;
     font-weight: bold;
@@ -72,15 +63,6 @@ button {
         inset 2px 2px 5px rgba(0, 0, 0, 0.25);
     cursor: pointer;
     border-radius: 10px;
-}
-
-body.light button, body.light input {
-    background: #fafafa;
-    color: #333;
-}
-
-button:hover, body.light button:hover {
-	color: plum;
 }
 
 .box-container {
@@ -96,27 +78,181 @@ button:hover, body.light button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
     user-select: none;
     color: #fafafa;
 }
 
-#city, #icon, #desc {
-    width: 100%;
-    height: 20%;
-}
-
-#temp, #humi, #wind {
-    width: 33.33%;
-    height: 20%;
-}
-
-#city, #icon, #desc, #temp, #humi, #wind {
-    font-family: Arial, Helvetica, sans-serif;
+#city,
+#desc,
+#temp,
+#humi,
+#wind {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2em;
     font-weight: bolder;
     text-transform: capitalize;
 }
 
-body.light #city, body.light #icon, body.light #desc, body.light #temp, body.light #humi, body.light #wind {
+#city,
+#desc {
+    width: 100%;
+    height: 20%;
+}
+
+#humi,
+#wind {
+    width: 33.33%;
+    height: 20%;
+}
+
+/*=============== WEATHER ICON ===============*/
+
+#icon {
+    width: 130px;
+    height: 130px;
+    border-radius: 40%;
+    z-index: 120;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#icon:hover {
+    transform: scale(110%);
+}
+
+#temp {
+    position: absolute;
+    top: 53%;
+    left: 30%;
+    font-size: 1.5em;
+}
+
+.cloudy {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 40%;
+    z-index: 120;
+    background: linear-gradient(to top right, rgb(49, 51, 60) 0%,
+            rgb(138, 139, 139) 40%);
+    box-shadow: 1px 1px 30px rgb(38, 40, 47);
+}
+
+.cloud {
+    position: absolute;
+    top: 5%;
+    left: 70%;
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(83, 85, 92);
+    box-shadow: 1px 1px 30px rgb(210, 216, 220);
+    animation: move 3s infinite linear;
+}
+
+.cloudx {
+    position: absolute;
+    top: 23%;
+    left: 55%;
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(105, 112, 114);
+    animation: move 3s infinite linear;
+}
+
+.cloudy li {
+    position: absolute;
+    list-style: none;
+    width: 2px;
+    height: 7px;
+    border-radius: 10%;
+    background-color: #eee;
+    opacity: 0;
+    animation: fall 3s infinite linear;
+    transform: rotate(25deg);
+}
+
+.cloudy li:nth-child(1) {
+    top: 40%;
+    left: 85%;
+}
+
+.cloudy li:nth-child(2) {
+    top: 35%;
+    left: 73%;
+    animation-delay: 0.3s;
+}
+
+.cloudy li:nth-child(3) {
+    top: 34%;
+    left: 77%;
+    animation-delay: 0.6s;
+}
+
+.cloudy li:nth-child(4) {
+    top: 45%;
+    left: 60%;
+    animation-delay: 1s;
+}
+
+.cloudy li:nth-child(5) {
+    top: 40%;
+    left: 65%;
+}
+
+/*=============== KEYFRAMES ===============*/
+
+@keyframes move {
+
+
+    50% {
+        transform: translateX(-10px);
+
+    }
+}
+
+
+@keyframes fall {
+    10% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-10px, 30px);
+
+    }
+
+    100% {
+        transform: translate(-25px, 70px);
+
+
+    }
+}
+
+/*=============== LIGHT MODE ===============*/
+
+body.light {
+    background: url(/images/light-mode/daytime.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body.light button,
+body.light input {
+    background: #fafafa;
+    color: #333;
+}
+
+button:hover,
+body.light button:hover {
+    color: plum;
+}
+
+body.light #city,
+body.light #desc,
+body.light #humi,
+body.light #wind {
     color: #333;
 }

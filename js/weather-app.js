@@ -6,7 +6,6 @@ let apiCall = function (city) {
         response.json().then((data) => {
             console.log(data);
             document.querySelector("#city").innerHTML = data.name;
-            document.querySelector("#temp").innerHTML = "<i class='fa-solid fa-temperature-low'></i>" + data.main.temp + '°C';
             document.querySelector("#humi").innerHTML = "<i class='fa-solid fa-droplet'></i>" + data.main.humidity + '%';
             document.querySelector("#wind").innerHTML = "<i class='fa-solid fa-wind'></i>" + data.wind.speed + 'Km/h';
             document.querySelector("#desc").innerHTML = data.weather[0].description;
@@ -15,7 +14,7 @@ let apiCall = function (city) {
             }
 
             if (data.weather[0].main === "Clouds") {
-                document.querySelector("#icon").innerHTML = "<i class='fa-solid fa-cloud fa-xl'></i>";
+                document.querySelector("#icon").innerHTML = "<div class= cloudy> <div id= temp class= box></div> <span class= cloud></span> <span class= cloudx></span> <ul> <li></li> <li></li> <li></li> <li></li> <li></li> </ul> </div>";
             }
 
             if (data.weather[0].main === "Drizzle") {
@@ -23,7 +22,7 @@ let apiCall = function (city) {
             }
 
             if (data.weather[0].main === "Rain") {
-                document.querySelector("#icon").innerHTML = "<i class='fa-solid fa-cloud-showers-heavy'></i>";
+                document.querySelector("#icon").innerHTML = "<div class= cloudy> <span class= cloud></span> <span class= cloudx></span> <ul> <li></li> <li></li> <li></li> <li></li> <li></li> </ul> </div>"
             }
 
             if (data.weather[0].main === "Snow") {
@@ -33,6 +32,8 @@ let apiCall = function (city) {
             if (data.weather[0].main === "Thunderstorm") {
                 document.querySelector("#icon").innerHTML = "<i class='fa-solid fa-cloud-bolt'></i>";
             }
+
+            document.querySelector("#temp").innerHTML = data.main.temp + '°C';
         })
     ).catch (err => console.log('Erreur : ' + err));
 }

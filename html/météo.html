@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <title>Météo</title>
     <link rel="stylesheet" type="text/css" href="/css/météo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<script src="https://kit.fontawesome.com/5714947897.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="btnLight">
-        <strong>☀️</strong>
-        <strong>🌙</strong>
+    <div class="theme__btn">
+        <strong><span class="material-symbols-outlined" style="color: whitesmoke;">light_mode</span></i></strong>
+        <strong><span class="material-symbols-outlined">dark_mode</span></strong>
     </div>
     <a href="index.html">
         <div class="btn">
@@ -28,36 +32,24 @@
             <i class="fa-solid fa-gamepad fa-xl"></i>
         </div>
     </a>
-    <a href="bulb.html">
-        <div class="btn4">
-            <i class="fa-regular fa-lightbulb fa-xl"></i>
-        </div>
-    </a>
     <form>
-        <input type="text" id="inputCity" placeholder="Ville">
+        <input type="text" id="inputCity" placeholder="City">
         <button type="submit">
-            Rechercher
+            Search
         </button>
         <div>
             <div class="box-container">
                 <div id="city" class="box"></div>
                 <div id="icon" class="box"></div>
                 <div id="desc" class="box"></div>
-                <div id="temp" class="box"></div>
                 <div id="humi" class="box"></div>
                 <div id="wind" class="box"></div>
             </div>
         </div>
     </form>
-
-    <script src="/js/app.js"></script>
-    <script>
-        let body = document.querySelector('body');
-        let btnLight = document.querySelector('.btnLight');
-        btnLight.onclick = function () {
-            body.classList.toggle('light')
-        }
-    </script>
+    
+    <script src="/js/weather-theme.js"></script>
+    <script src="/js/weather-app.js"></script>
 </body>
 
 </html>
