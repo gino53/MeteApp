@@ -193,25 +193,9 @@ body.light .calculator .clear,
 	background: #f00;
 }
 
-body.light .calculator .clear::before,
-.calculator .clear::before {
-	background: linear-gradient(90deg, #d20000, #ffffff5c);
-	border-left: 1px solid #fff4;
-	border-bottom: 1px solid #fff4;
-	border-top: 1px solid #fff4;
-}
-
 body.light .calculator .equal,
 .calculator .equal {
-	background: #2196f3;
-}
-
-body.light .calculator .equal::before,
-.calculator .equal::before {
-	background: linear-gradient(90deg, #1479c9, #ffffff5c);
-	border-left: 1px solid #fff4;
-	border-bottom: 1px solid #fff4;
-	border-top: 1px solid #fff4;
+	background: #21f3ad;
 }
 
 body.light .separation {
