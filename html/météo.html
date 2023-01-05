@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<script src="https://kit.fontawesome.com/5714947897.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
 </head>
 
 <body>
@@ -33,17 +34,27 @@
         </div>
     </a>
     <form>
-        <input type="text" id="inputCity" placeholder="City">
-        <button type="submit">
-            Search
-        </button>
+        <div class="search">
+            <input type="text" id="inputCity" placeholder="City">
+            <button type="submit">
+                <span class="material-symbols-outlined">travel_explore</span>
+            </button>
+        </div>
         <div>
-            <div class="box-container">
-                <div class="box" id="city"></div>
-                <a class="box" id="icon" href="https://meteofrance.com/"></a>
-                <div class="box" id="desc"></div>
-                <div class="box" id="humi"></div>
-                <div class="box" id="wind"></div>
+            <div class="container__data">
+                <h1 id="city"></h1>
+                <a id="icon" href="https://meteofrance.com/"></a>
+                <h1 id="desc"></h1>
+                <div class="container__info">
+                    <div class="data">
+                        <lord-icon src="https://cdn.lordicon.com/oyclgnwc.json" trigger="loop"  colors="primary:#ffffff,secondary:#ffffff" id="icon__humidity"></lord-icon>
+                        <h1 id="humi"></h1>
+                    </div>
+                    <div class="data">
+                        <lord-icon src="https://cdn.lordicon.com/rvrbsoyg.json" trigger="loop"  colors="primary:#ffffff,secondary:#ffffff" id="icon__wind"></lord-icon>
+                        <h1 id="wind"></h1>
+                    </div>  
+                </div>
             </div>
         </div>
     </form>

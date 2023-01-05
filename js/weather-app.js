@@ -4,10 +4,10 @@ let apiCall = function (city) {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}&units=metric&lang=fr`;
     fetch(url).then(response =>
         response.json().then((data) => {
-            document.querySelector("#city").innerHTML = data.name;
-            document.querySelector("#humi").innerHTML = "<i class='fa-solid fa-droplet'></i>" + data.main.humidity + '%';
-            document.querySelector("#wind").innerHTML = "<i class='fa-solid fa-wind'></i>" + data.wind.speed + 'Km/h';
-            document.querySelector("#desc").innerHTML = data.weather[0].description;
+            document.querySelector("#city").textContent = data.name;
+            document.querySelector("#humi").textContent = data.main.humidity + '%';
+            document.querySelector("#wind").textContent = data.wind.speed + 'Km/h';
+            document.querySelector("#desc").textContent = data.weather[0].description;
             if (data.weather[0].main === "Clear") {
                 document.querySelector("#icon").innerHTML = "<div class= sunny> <div id= temp class= box></div> <span class= sun></span> <span class= sunx></span> </div>";
             }
@@ -32,7 +32,7 @@ let apiCall = function (city) {
                 document.querySelector("#icon").innerHTML = "<div class= cloudy> <div id= temp class= box></div> <span class= cloud-storm></span> <span class= cloud2-storm></span> <span class= cloud3-storm></span> </div>";
             }
 
-            document.querySelector("#temp").innerHTML = data.main.temp + '°C';
+            document.querySelector("#temp").textContent = data.main.temp + '°C';
         })
     ).catch (err => console.log('Erreur : ' + err));
 }

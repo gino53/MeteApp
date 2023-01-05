@@ -20,17 +20,13 @@ form {
     width: 70%;
 }
 
-input {
+.search {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     max-width: 600px;
-    height: 40px;
-    color: #fff;
-    padding-left: 10px;
-    border: none;
-    outline: none;
     border-radius: 1.25rem;
     border-top: 1px solid rgba(255, 255, 255, .3);
     border-left: 1px solid rgba(255, 255, 255, .3);
@@ -39,33 +35,46 @@ input {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     -moz-backdrop-filter: blur(10px);
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
 }
 
-button {
+input {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    max-width: 400px;
-    height: 50px;
-    margin: 1rem;
-    background: #333;
+    width: 100%;
+    max-width: 600px;
+    height: 40px;
     color: #fff;
+    padding-left: 10px;
     border: none;
+    outline: none;
+    background: none;
     font-size: 1.5em;
-    font-weight: bold;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25),
-        5px 5px 30px rgba(0, 0, 0, 0.25),
-        inset -2px -2px 5px rgba(0, 0, 0, 0.25),
-        inset 2px 2px 5px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    border-radius: 10px;
 }
 
-.box-container {
+::placeholder {
+	color: rgb(224, 223, 223);
+	transition: 0.5s;
+}
+
+::selection {
+	background-color: rgba(255, 255, 255, .3);
+}
+
+button {
+    margin-right: 0.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fafafa;
+    transition: 0.5s;
+}
+
+button:hover {
+    transform: rotate(360deg);
+}
+
+.container__data {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -73,35 +82,45 @@ button {
     height: 500px;
 }
 
-.box {
+h1,
+a {
+    color: #eee;
+    transition: 0.5s;
+}
+
+h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    user-select: none;
-    color: #eee;
+    font-size: 2em;
+    text-transform: capitalize;
 }
 
-#city,
-#desc,
-#temp,
-#humi,
-#wind {
-    font-family: 'Nunito', sans-serif;
-    font-size: 2em;
-    font-weight: bolder;
-    text-transform: capitalize;
+.container__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1rem;
+}
+
+#icon__humidity,
+#icon__wind {
+    width: 80px;
+    height: 80px;
 }
 
 #city,
 #desc {
     width: 100%;
-    height: 20%;
-}
-
-#humi,
-#wind {
-    width: 33.33%;
     height: 20%;
 }
 
@@ -127,9 +146,9 @@ button {
     font-size: 1.5em;
 }
 
+.sunny,
 .rainy,
 .cloudy,
-.sunny,
 .breezy,
 .stormy {
     position: absolute;
@@ -170,13 +189,7 @@ button {
     opacity: 0.2;
 }
 
-.cloudy {
-    background: linear-gradient(to top right, rgb(49, 51, 60) 0%,
-            rgb(138, 139, 139) 40%);
-    box-shadow: 1px 1px 30px rgb(38, 40, 47);
-}
-
-.rainy {
+.cloudy, .rainy {
     background: linear-gradient(to top right, rgb(49, 51, 60) 0%,
             rgb(138, 139, 139) 40%);
     box-shadow: 1px 1px 30px rgb(38, 40, 47);
@@ -252,6 +265,17 @@ button {
     animation: flash 1s infinite linear, move 3s infinite linear;
 }
 
+.cloudr {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(141, 203, 236);
+    box-shadow: 1px 1px 30px rgba(84, 110, 122, 1);
+}
+
 .rainy li {
     position: absolute;
     list-style: none;
@@ -299,17 +323,6 @@ button {
     box-shadow: 1px 1px 30px rgba(38, 198, 218, 1);
 }
 
-.cloudr {
-    position: absolute;
-    top: 5%;
-    left: 60%;
-    width: 60px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: rgb(141, 203, 236);
-    box-shadow: 1px 1px 30px rgba(84, 110, 122, 1);
-}
-
 .breezy li {
     position: absolute;
     list-style: none;
@@ -352,8 +365,8 @@ button {
 
 .stormy {
     position: absolute;
-    background: linear-gradient(to top right, rgb(253, 251, 251) 0%,
-            rgba(33, 33, 33, 1) 90%);
+    background: linear-gradient(to top right, rgb(33, 33, 33, 1) 0%,
+            rgb(171, 171, 171) 90%);
     box-shadow: 1px 1px 30px rgba(33, 33, 33, 1);
 }
 
@@ -537,20 +550,22 @@ body.light {
     background-repeat: no-repeat;
 }
 
-body.light button,
 body.light input {
-    background: #fafafa;
     color: #333;
 }
 
-button:hover,
-body.light button:hover {
-    color: plum;
+body.light ::placeholder {
+	color: #757575;
 }
 
-body.light #city,
-body.light #desc,
-body.light #humi,
-body.light #wind {
+body.light ::selection {
+	background-color: rgba(78, 76, 76, 0.3);
+}
+
+body.light button {
+    color: #333;
+}
+
+body.light h1 {
     color: #333;
 }

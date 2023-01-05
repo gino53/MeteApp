@@ -5,6 +5,8 @@
 	user-select: none;
 	text-decoration: none;
 	list-style: none;
+	font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
 }
 
 body {

@@ -23,8 +23,6 @@ img {
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	-moz-backdrop-filter: blur(10px);
-	font-family: 'Nunito', sans-serif;
-	font-weight: bold;
 	transition: 0.5s ease-out;
 }
 
