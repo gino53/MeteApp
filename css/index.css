@@ -37,12 +37,18 @@ a {
 	transition: 0.5s;
 }
 
-i {
+lord-icon {
 	position: inherit;
+	width: 110px;
+	height: 110px;
 	transition: 0.5s;
 }
 
-a:hover i {
+#icon__game {
+	margin-bottom: 1.25rem;
+}
+
+a:hover lord-icon {
 	transform: translateY(-20px);
 }
 
@@ -50,10 +56,6 @@ a:hover i {
 	margin-top: 60px;
 	opacity: 0;
 	transition: 0.5s;
-}
-
-#game {
-	margin-top: 50px;
 }
 
 a:hover .name {
