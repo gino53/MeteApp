@@ -1,15 +1,11 @@
 @import '/css/general.css';
 @import '/css/theme__btn.css';
-@import '/css/btn.css';
+@import '/css/nav__btn.css';
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: url(/images/dark-mode/night.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
 }
 
 form {

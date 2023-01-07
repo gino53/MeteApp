@@ -17,26 +17,26 @@
         <strong><span class="material-symbols-outlined" style="color: whitesmoke;">light_mode</span></i></strong>
         <strong><span class="material-symbols-outlined">dark_mode</span></strong>
     </div>
-    <a href="index.html">
-        <div class="btn">
-            <i class="fa-solid fa-house fa-xl"></i>
-        </div>
-    </a>
-    <a href="calculator.html">
-        <div class="btn2">
-            <i class="fa-solid fa-calculator fa-xl"></i>
-        </div>
-    </a>
-    <a href="météo.html">
-        <div class="btn3">
-            <i class="fa-solid fa-cloud-sun-rain fa-xl"></i>
-        </div>
-    </a>
-    <a href="bulb.html">
-        <div class="btn4">
-            <i class="fa-regular fa-lightbulb fa-xl"></i>
-        </div>
-    </a>
+    <div class="container__btn">
+        <a href="index.html" class="nav__btn">
+            <div class="btn">
+                <lord-icon src="https://cdn.lordicon.com/gmzxduhd.json" trigger="loop" colors="primary:#ffffff,secondary:#ffffff" id="icon__menu"></lord-icon>
+                <span class="name">Home</span>
+            </div>
+        </a>
+        <a href="calculator.html" class="nav__btn">
+            <div class="btn">
+                <lord-icon src="https://cdn.lordicon.com/qhviklyi.json" trigger="loop" colors="primary:#ffffff,secondary:#ffffff" id="icon__math"></lord-icon>
+                <span class="name">Calculator</span>
+            </div>
+        </a>
+        <a href="weather.html" class="nav__btn">
+            <div class="btn">
+                <lord-icon src="https://cdn.lordicon.com/wcjauznf.json" trigger="loop" colors="primary:#ffffff,secondary:#ffffff" id="icon__weather"></lord-icon>
+                <span class="name">Weather</span>
+            </div>
+        </a>
+    </div>
     <img src="/images/dark-mode/dark-font-game.gif" alt="" id="font__game">
     <canvas id="myCanvas" width="400" height="400"></canvas>
     <script src="/js/game-theme.js"></script>
