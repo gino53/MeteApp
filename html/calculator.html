@@ -67,13 +67,14 @@
 			<span class="num equal touch" onclick="document.calc.txt.value=eval(calc.txt.value)"><i>=</i><h4>Equal</h4></span>
 		</form>
 	</div>
-	<script src="/js/calculator-theme.js"></script>
-	<script>
-		let parent = document.querySelector('.container__brackets');
-		parent.onclick = function() {
-			parent.classList.toggle('active')
-		}
-	</script>
 </body>
+
+<script src="/js/calculator-theme.js"></script>
+<script>
+	let parent = document.querySelector('.container__brackets');
+	parent.onclick = function() {
+		parent.classList.toggle('active')
+	}
+</script>
 
 </html>

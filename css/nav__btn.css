@@ -1,16 +1,16 @@
 .container__btn {
 	position: absolute;
-	top: 100px;
-	left: 20px;
+	left: 1px;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
+	flex-direction: column;
 }
 
 .nav__btn {
 	position: relative;
-	width: 208px;
-	height: 208px;
+	width: 100px;
+	height: 100px;
+	margin: 20px;
 }
 
 .btn {
@@ -42,12 +42,10 @@
 #icon__weather,
 #icon__game {
 	position: inherit;
-	width: 50px;
-	height: 50px;
+	width: 60%;
+	height: 60%;
 	transition: 0.5s;
 }
-
-
 
 .nav__btn:hover #icon__menu,
 .nav__btn:hover #icon__math,
@@ -64,4 +62,37 @@
 
 .nav__btn:hover .name {
 	opacity: 1;
+}
+
+/*=============== MEDIA SCREEN ===============*/
+
+@media screen and (max-width: 1024px) {
+
+	.container__btn {
+		bottom: -10px;
+		left: 0;
+		flex-direction: row;
+		width: 100%;
+	}
+
+	.btn {
+		width: 80px;
+		height: 80px;
+		font-size: 0.825em;
+	}
+
+	.nav__btn:hover #icon__menu,
+	.nav__btn:hover #icon__math,
+	.nav__btn:hover #icon__game {
+		transform: translateY(-15px);
+	}
+
+	.nav__btn:hover #icon__weather {
+		transform: translateY(-10px);
+	}
+
+	.name {
+		margin-top: 30px;
+	}
+
 }
