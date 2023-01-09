@@ -1,5 +1,6 @@
 @import '/css/general.css';
 @import '/css/theme__btn.css';
+@import '/css/anime.css';
 
 .container__btn {
 	display: flex;
@@ -63,11 +64,10 @@ a:hover .name {
 	opacity: 1;
 }
 
-.img__math,
-.img__weather,
-.img__game {
+img {
 	position: absolute;
 	z-index: -1;
+	pointer-events: none;
 }
 
 .img__math {
@@ -93,6 +93,8 @@ a:hover .name {
 @media screen and (max-width: 1024px) {
 
 	.container__btn {
+		position: absolute;
+		bottom: 120px;
 		flex-direction: column;
 	}
 
