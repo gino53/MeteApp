@@ -1,3 +1,5 @@
+/*=============== ANIME ===============*/
+
 const title = document.querySelector('h1');
 const letters = [...document.querySelectorAll('h1 span')]
 
@@ -74,6 +76,8 @@ function animOut() {
     })
 }
 
+/*=============== SCROLL REVEAL ===============*/
+
 const sr = ScrollReveal({
 	reset: true,
 	distance: '60px',
@@ -83,7 +87,6 @@ const sr = ScrollReveal({
 
 sr.reveal(`.top`, { delay: 500, origin: 'top' });
 sr.reveal(`.bottom`, { delay: 500, origin: 'bottom', interval: 200 });
-sr.reveal(`.right`, { delay: 700, origin: 'right' });
-sr.reveal(`.left`, { delay: 700, origin: 'left' });
-sr.reveal(`.nav__menu`, { delay: 700, origin: 'bottom', interval: 200 });
-sr.reveal(`.figure-1, .figure-2, .figure-3, .figure-4`, { delay: 600, origin: 'right' });
+sr.reveal(`.theme__btn__reveal`, { delay: 700, origin: 'right' });
+sr.reveal(`.search`, { delay: 700, origin: 'left' });
+sr.reveal(`.info__data`, { delay: 700, origin: 'bottom', interval: 200 });

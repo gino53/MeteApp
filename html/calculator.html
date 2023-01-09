@@ -10,12 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+	<script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
-    <div class="theme__btn">
-        <strong><span class="material-symbols-outlined" style="color: whitesmoke;">light_mode</span></i></strong>
-        <strong><span class="material-symbols-outlined">dark_mode</span></strong>
+    <div class="theme__btn__reveal">
+        <div class="theme__btn">
+            <strong><span class="material-symbols-outlined" style="color: whitesmoke;">light_mode</span></i></strong>
+            <strong><span class="material-symbols-outlined">dark_mode</span></strong>
+        </div>
     </div>
     <div class="container__btn">
         <a href="index.html" class="nav__btn">
@@ -37,8 +40,24 @@
             </div>
         </a>
     </div>
-	<img src="/images/dark-mode/white-math.png" alt="" id="font__math">
-	<div class="container">
+	<div class="font__math">
+		<img src="/images/dark-mode/white-math.png" alt="" class="bottom" id="font__math">
+	</div>
+	<div class="container__anime">
+        <h1 class="top">
+            <span>C</span>
+            <span>A</span>
+            <span>L</span>
+			<span>C</span>
+            <span>U</span>
+            <span>L</span>
+			<span>A</span>
+            <span>T</span>
+            <span>O</span>
+			<span>R</span>
+        </h1>
+    </div>
+	<div class="container__calculator bottom">
 		<form class="calculator" name="calc">
 			<input type="text" class="value" readonly name="txt" placeholder="0">
 			<span class="num clear touch" onclick="calc.txt.value=''"><i>C</i><h4>Delete</h4></span>
@@ -70,6 +89,8 @@
 </body>
 
 <script src="/js/calculator-theme.js"></script>
+<script src="/js/animation.js"></script>
+<script src="/js/anime-master/lib/anime.min.js"></script>
 <script>
 	let parent = document.querySelector('.container__brackets');
 	parent.onclick = function() {

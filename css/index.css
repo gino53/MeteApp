@@ -1,6 +1,5 @@
 @import '/css/general.css';
 @import '/css/theme__btn.css';
-@import '/css/anime.css';
 
 .container__btn {
 	display: flex;
@@ -88,9 +87,45 @@ img {
 	transform: rotate(35deg);
 }
 
+/*=============== ANIME TEXT ===============*/
+
+.container__anime {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    perspective: 1000px;
+}
+
+.container__anime h1 {
+    transform-style: preserve-3d;
+    display: inline-flex;
+    margin-top: 200px;
+    font-size: 190px;
+    color: #fafafa;
+}
+
+.container__anime h1 span {
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/*=============== LIGHT MODE ===============*/
+
+body.light .container__anime h1 {
+    color: #333;
+}
+
 /*=============== MEDIA SCREEN ===============*/
 
 @media screen and (max-width: 1024px) {
+
+	.container__anime {
+        top: -80px;
+    }
+
+    .container__anime h1 {
+        font-size: 150px;
+    }
 
 	.container__btn {
 		position: absolute;

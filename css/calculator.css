@@ -2,15 +2,23 @@
 @import '/css/theme__btn.css';
 @import '/css/nav__btn.css';
 
-img {
+.font__math {
 	position: absolute;
+	top: 160px;
 	width: 1000px;
 	height: 1200px;
 	z-index: -1;
+	transition: 0.5s;
 }
 
-.container {
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.container__calculator {
 	position: relative;
+	top: 100px;
 	width: 90%;
 	max-width: 480px;
 	min-height: 80%;
@@ -23,13 +31,13 @@ img {
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	-moz-backdrop-filter: blur(10px);
-	transition: 0.5s ease-out;
 }
 
 .calculator {
 	position: relative;
 	display: grid;
 	align-items: center;
+	transition: 0.5s;
 }
 
 .calculator .value {
@@ -162,7 +170,33 @@ h4 {
 	transition: 2s;
 }
 
+/*=============== ANIME TEXT ===============*/
+
+.container__anime {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    perspective: 1000px;
+}
+
+.container__anime h1 {
+    transform-style: preserve-3d;
+    display: inline-flex;
+    margin-top: 200px;
+    font-size: 6em;
+    color: #fafafa;
+}
+
+.container__anime h1 span {
+    pointer-events: none;
+    transition: 0.5s;
+}
+
 /*=============== LIGHT MODE ===============*/
+
+body.light .container__anime h1 {
+    color: #333;
+}
 
 body.light .calculator .value {
 	color: #333;
@@ -201,4 +235,26 @@ body.light .calculator .equal,
 body.light .separation {
 	background: #333;
 	transition: 2s;
+}
+
+/*=============== MEDIA SCREEN ===============*/
+
+@media screen and (max-width: 1024px) {
+
+	.font__math {
+		top: 60px;
+	}
+
+    .container__anime {
+        top: -30px;
+    }
+
+    .container__anime h1 {
+        font-size: 4em;
+    }
+
+	.container__calculator {
+		top: 0;
+	}
+
 }

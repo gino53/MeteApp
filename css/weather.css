@@ -9,6 +9,8 @@ body {
 }
 
 form {
+    position: relative;
+    top: 70px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -78,13 +80,13 @@ button:hover {
     height: 500px;
 }
 
-h1,
+.info__data,
 a {
     color: #eee;
     transition: 0.5s;
 }
 
-h1 {
+.info__data {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,6 +122,28 @@ h1 {
     height: 20%;
 }
 
+/*=============== ANIME TEXT ===============*/
+
+.container__anime {
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    perspective: 1000px;
+}
+
+.container__anime h1 {
+    transform-style: preserve-3d;
+    display: inline-flex;
+    margin-top: 200px;
+    font-size: 6em;
+    color: #fafafa;
+}
+
+.container__anime h1 span {
+    pointer-events: none;
+    transition: 0.5s;
+}
+
 /*=============== WEATHER ICON ===============*/
 
 #icon {
@@ -131,15 +155,11 @@ h1 {
     cursor: pointer;
 }
 
-#icon:hover {
-    transform: scale(110%);
-}
-
 #temp {
     position: absolute;
     top: 53%;
-    left: 20%;
-    font-size: 1.5em;
+    left: 23%;
+    font-size: 0.825em;
 }
 
 .sunny,
@@ -152,6 +172,15 @@ h1 {
     height: 130px;
     border-radius: 40%;
     z-index: 120;
+    transition: 0.5s;
+}
+
+.sunny:hover,
+.rainy:hover,
+.cloudy:hover,
+.breezy:hover,
+.stormy:hover {
+    transform: scale(110%);
 }
 
 .sunny {
@@ -564,4 +593,18 @@ body.light button {
 
 body.light h1 {
     color: #333;
+}
+
+/*=============== MEDIA SCREEN ===============*/
+
+@media screen and (max-width: 1024px) {
+
+    .container__anime {
+        top: 90px;
+    }
+
+    .container__anime h1 {
+        font-size: 4em;
+    }
+
 }
