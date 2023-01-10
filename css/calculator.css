@@ -174,7 +174,7 @@ h4 {
 
 .container__anime {
     position: absolute;
-    top: 20px;
+    top: -70px;
     text-align: center;
     perspective: 1000px;
 }
@@ -242,7 +242,7 @@ body.light .separation {
 @media screen and (max-width: 1024px) {
 
 	.font__math {
-		top: 60px;
+		top: 100px;
 	}
 
     .container__anime {
@@ -254,7 +254,7 @@ body.light .separation {
     }
 
 	.container__calculator {
-		top: 0;
+		top: 40px;
 	}
 
 }
