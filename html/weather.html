@@ -16,7 +16,7 @@
 <body>
     <div class="theme__btn__reveal">
         <div class="theme__btn">
-            <strong><span class="material-symbols-outlined" style="color: whitesmoke;">light_mode</span></i></strong>
+            <strong><span class="material-symbols-outlined">light_mode</span></strong>
             <strong><span class="material-symbols-outlined">dark_mode</span></strong>
         </div>
     </div>
@@ -54,25 +54,24 @@
     <form>
         <div class="search">
             <input type="text" id="inputCity" placeholder="City">
-            <button type="submit">
+            <button type="submit" class="submit__btn">
                 <span class="material-symbols-outlined">travel_explore</span>
+                <span class="submit__btn__text">Search</span>
             </button>
         </div>
-        <div>
-            <div class="container__data bottom">
-                <h1 class="info__data" id="city"></h1>
-                <a class="info__data" id="icon" href="https://meteofrance.com/"></a>
-                <h1 class="info__data" id="desc"></h1>
-                <div class="container__info">
-                    <div class="data">
-                        <lord-icon src="https://cdn.lordicon.com/oyclgnwc.json" trigger="loop"  colors="primary:#ffffff,secondary:#ffffff" id="icon__humidity"></lord-icon>
-                        <h1 class="info__data" id="humi"></h1>
-                    </div>
-                    <div class="data">
-                        <lord-icon src="https://cdn.lordicon.com/rvrbsoyg.json" trigger="loop"  colors="primary:#ffffff,secondary:#ffffff" id="icon__wind"></lord-icon>
-                        <h1 class="info__data" id="wind"></h1>
-                    </div>  
+        <div class="container__data bottom">
+            <h1 class="info__data" id="city"></h1>
+            <a class="info__data" id="icon" href="https://meteofrance.com/"></a>
+            <h1 class="info__data" id="desc"></h1>
+            <div class="container__info">
+                <div class="data">
+                    <lord-icon src="https://cdn.lordicon.com/oyclgnwc.json" trigger="loop"  colors="primary:#ffffff,secondary:#ffffff" id="icon__humidity"></lord-icon>
+                    <h1 class="info__data" id="humi"></h1>
                 </div>
+                <div class="data">
+                    <lord-icon src="https://cdn.lordicon.com/rvrbsoyg.json" trigger="loop"  colors="primary:#ffffff,secondary:#ffffff" id="icon__wind"></lord-icon>
+                    <h1 class="info__data" id="wind"></h1>
+                </div>  
             </div>
         </div>
     </form>
@@ -82,5 +81,11 @@
 <script src="/js/animation.js"></script>
 <script src="/js/anime-master/lib/anime.min.js"></script>
 <script src="/js/weather-app.js"></script>
+
+<style>
+    .material-symbols-outlined {
+        font-size: 36px;
+    }
+</style>
 
 </html>

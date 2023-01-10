@@ -13,8 +13,8 @@ form {
     top: 70px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     width: 70%;
 }
 
@@ -33,6 +33,7 @@ form {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     -moz-backdrop-filter: blur(10px);
+    overflow: hidden;
 }
 
 input {
@@ -42,40 +43,50 @@ input {
     width: 100%;
     max-width: 600px;
     height: 40px;
-    color: #fff;
-    padding-left: 10px;
+    padding-left: 0.625rem;
     border: none;
     outline: none;
     background: none;
+    color: #fff;
     font-size: 1.5em;
 }
 
 ::placeholder {
-	color: rgb(224, 223, 223);
-	transition: 0.5s;
-}
-
-::selection {
-	background-color: rgba(255, 255, 255, .3);
-}
-
-button {
-    margin-right: 0.5rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #fafafa;
+    color: rgb(224, 223, 223);
     transition: 0.5s;
 }
 
-button:hover {
-    transform: rotate(360deg);
+::selection {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.submit__btn {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background: none;
+    border: none;
+    color: #fafafa;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.submit__btn__text {
+    width: 0px;
+    margin-left: 0.25rem;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+
+.submit__btn:hover .submit__btn__text {
+    width: 60px;
+    margin-right: 0.625rem;
 }
 
 .container__data {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     width: 500px;
     height: 500px;
 }
@@ -88,9 +99,9 @@ a {
 
 .info__data {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     font-size: 2em;
     text-transform: capitalize;
 }
@@ -127,16 +138,16 @@ a {
 .container__anime {
     position: absolute;
     top: 30px;
-    text-align: center;
     perspective: 1000px;
+    text-align: center;
 }
 
 .container__anime h1 {
-    transform-style: preserve-3d;
     display: inline-flex;
     margin-top: 200px;
-    font-size: 6em;
+    transform-style: preserve-3d;
     color: #fafafa;
+    font-size: 6em;
 }
 
 .container__anime h1 span {
@@ -151,15 +162,15 @@ a {
     height: 130px;
     border-radius: 40%;
     z-index: 120;
-    transition: 0.5s;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 #temp {
     position: absolute;
     top: 53%;
     left: 23%;
-    font-size: 0.825em;
+    font-size: 0.725em;
 }
 
 .sunny,
@@ -214,7 +225,8 @@ a {
     opacity: 0.2;
 }
 
-.cloudy, .rainy {
+.cloudy,
+.rainy {
     background: linear-gradient(to top right, rgb(49, 51, 60) 0%,
             rgb(138, 139, 139) 40%);
     box-shadow: 1px 1px 30px rgb(38, 40, 47);
@@ -508,11 +520,8 @@ a {
 /*=============== KEYFRAMES ===============*/
 
 @keyframes inex {
-
-
     50% {
         opacity: 0.4;
-
     }
 
     60% {
@@ -521,11 +530,8 @@ a {
 }
 
 @keyframes move {
-
-
     50% {
         transform: translateX(-10px);
-
     }
 }
 
@@ -538,13 +544,10 @@ a {
     50% {
         opacity: 1;
         transform: translate(-10px, 30px);
-
     }
 
     100% {
         transform: translate(-25px, 70px);
-
-
     }
 }
 
@@ -580,11 +583,11 @@ body.light input {
 }
 
 body.light ::placeholder {
-	color: #757575;
+    color: #757575;
 }
 
 body.light ::selection {
-	background-color: rgba(78, 76, 76, 0.3);
+    background-color: rgba(78, 76, 76, 0.3);
 }
 
 body.light button {
