@@ -85,8 +85,8 @@ const sr = ScrollReveal({
 	delay: 400
 })
 
-sr.reveal(`.top`, { delay: 500, origin: 'top' });
+sr.reveal(`.top`, { delay: 500, origin: 'top', interval: 200 });
 sr.reveal(`.bottom`, { delay: 500, origin: 'bottom', interval: 200 });
-sr.reveal(`.theme__btn__reveal`, { delay: 700, origin: 'right' });
-sr.reveal(`.search`, { delay: 700, origin: 'left' });
 sr.reveal(`.info__data`, { delay: 700, origin: 'bottom', interval: 200 });
+sr.reveal(`.theme__btn__reveal`, { delay: 700, origin: 'right' });
+sr.reveal(`.container__btn`, { delay: 700, origin: 'left' });

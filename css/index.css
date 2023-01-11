@@ -1,7 +1,7 @@
 @import '/css/general.css';
 @import '/css/theme__btn.css';
 
-.container__btn {
+.container__btn__index {
 	display: flex;
 	justify-content: center;
 }
@@ -127,7 +127,7 @@ body.light .container__anime h1 {
         font-size: 150px;
     }
 
-	.container__btn {
+	.container__btn__index {
 		position: absolute;
 		bottom: 120px;
 		flex-direction: column;
