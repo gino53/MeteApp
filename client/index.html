@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Météo</title>
+    <link rel="icon" href="" />
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,28 +11,31 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <title>MétéApp</title>
 </head>
 
 <body>
-    <div class="right theme__btn__reveal">
-        <div class="theme__btn">
-            <strong><span class="material-symbols-outlined">light_mode</span></strong>
-            <strong><span class="material-symbols-outlined">dark_mode</span></strong>
+    <header>
+        <div class="right" id="theme_btn_container">
+            <div id="theme_btn">
+                <strong><span class="material-symbols-outlined">light_mode</span></strong>
+                <strong><span class="material-symbols-outlined">dark_mode</span></strong>
+            </div>
         </div>
-    </div>
         <div class="top container__anime">
-            <h1>
-                <span>M</span>
-                <span>E</span>
-                <span>T</span>
-                <span>E</span>
-                <span>O</span>
-            </h1>
+                <h1>
+                    <span>M</span>
+                    <span>E</span>
+                    <span>T</span>
+                    <span>E</span>
+                    <span>O</span>
+                </h1>
         </div>
-    <div class="form_container">
+    </header>
+    <section>
         <form class="bottom">
             <div class="bottom container__data">
-                <div id="container_time">
+                <div id="time_container">
                     <span id="time"></span>
                     <span id="date"></span>
                 </div>
@@ -52,20 +55,25 @@
                     </div>  
                 </div>
             </div>
-            <div class="search">
-                <input type="text" id="inputCity" placeholder="City">
-                <button type="submit" class="submit__btn">
+            <div id="search_container">
+                <input type="text" placeholder="City" id="search_input">
+                <button type="submit" id="search_btn">
                     <span class="material-symbols-outlined">travel_explore</span>
-                    <span class="submit__btn__text">Search</span>
+                    <span id="search_btn_txt">Search</span>
                 </button>
             </div>
+            <div class="bubble" id="bubble-1"></div>
+            <div class="bubble" id="bubble-2"></div>
+            <div class="bubble" id="bubble-3"></div>
+            <div class="bubble" id="bubble-4"></div>
+            <div class="bubble" id="bubble-5"></div>
         </form>
-        <div class="drop drop-1"></div>
-        <div class="drop drop-2"></div>
-        <div class="drop drop-3"></div>
-        <div class="drop drop-4"></div>
-        <div class="drop drop-5"></div>
-    </div>
+    </section>
+    <footer>
+        <span>
+            © 2023 - Tous Droits Réservés | Icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        </span>  
+    </footer>
 </body>
 
 <script src="/js/main.js"></script>

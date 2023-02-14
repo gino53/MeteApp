@@ -1,11 +1,11 @@
-.theme__btn__reveal {
+#theme_btn_container {
 	position: absolute;
 	top: 10px;
 	right: 1px;
 	z-index: 1;
 }
 
-.theme__btn {
+#theme_btn {
 	position: absolute;
 	top: 1.25rem;
 	right: 1.25rem;
@@ -20,18 +20,18 @@
 	transition: 0.5s;
 }
 
-.theme__btn:hover {
+#theme_btn:hover {
 	transform: rotate(360deg);
 }
 
-.theme__btn strong {
+#theme_btn strong {
 	position: inherit;
 	height: 36px;
 	opacity: 0;
 	transition: 0.5s;
 }
 
-.theme__btn strong:nth-child(1) {
+#theme_btn strong:nth-child(1) {
 	opacity: 1;
 	color: #df9100;
 	animation: color-sun 5s infinite linear;
@@ -77,11 +77,11 @@
 
 /*=============== LIGHT MODE ===============*/
 
-body.light .theme__btn strong:nth-child(1) {
+body.light #theme_btn strong:nth-child(1) {
 	opacity: 0;
 }
 
-body.light .theme__btn strong:nth-child(2) {
+body.light #theme_btn strong:nth-child(2) {
 	opacity: 1;
 	color: #4b4453;
 	animation: color-moon 5s infinite linear;

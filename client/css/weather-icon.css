@@ -1,0 +1,481 @@
+#icon {
+  position: absolute;
+  top: -50px;
+  width: 130px;
+  height: 130px;
+  border-radius: 40%;
+  z-index: 120;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#temp {
+  position: absolute;
+  top: 53%;
+  left: 23%;
+  font-size: 0.725em;
+}
+
+.sunny,
+.rainy,
+.cloudy,
+.breezy,
+.stormy {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 40%;
+  z-index: 120;
+  transition: 0.5s;
+}
+
+.sunny:hover,
+.rainy:hover,
+.cloudy:hover,
+.breezy:hover,
+.stormy:hover {
+  transform: scale(110%);
+}
+
+.sunny {
+  background: linear-gradient(
+    to top right,
+    rgba(63, 81, 181, 1) 0%,
+    rgba(3, 155, 229, 1) 40%
+  );
+  box-shadow: 1px 1px 30px rgba(2, 119, 189, 1);
+}
+
+.sun {
+  position: absolute;
+  top: -10%;
+  left: 65%;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: linear-gradient(
+    to bottom left,
+    rgba(255, 235, 59, 1) 0%,
+    rgba(249, 168, 37, 1) 90%
+  );
+  box-shadow: 1px 1px 30px rgba(255, 160, 0, 1);
+  animation: inex 3s infinite linear;
+}
+
+.sunx {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: 0.2;
+}
+
+.cloudy,
+.rainy {
+  background: linear-gradient(
+    to top right,
+    rgb(49, 51, 60) 0%,
+    rgb(138, 139, 139) 40%
+  );
+  box-shadow: 1px 1px 30px rgb(38, 40, 47);
+}
+
+.cloud {
+  position: absolute;
+  top: 5%;
+  left: 70%;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(83, 85, 92);
+  box-shadow: 1px 1px 30px rgb(210, 216, 220);
+  animation: move 3s infinite linear;
+}
+
+.cloud2 {
+  position: absolute;
+  top: 23%;
+  left: 55%;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(105, 112, 114);
+  animation: move 3s infinite linear;
+}
+
+.cloud3 {
+  position: absolute;
+  top: 3%;
+  left: 40%;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(105, 112, 114);
+  animation: move 3s infinite linear;
+  z-index: -1;
+}
+
+.cloud4 {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(208, 208, 208);
+  animation: move 3s infinite linear;
+  z-index: -1;
+}
+
+.cloud-storm {
+  position: absolute;
+  top: 5%;
+  left: 70%;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(83, 85, 92);
+  box-shadow: 1px 1px 30px rgb(210, 216, 220);
+  animation: flash 2s infinite linear, move 3s infinite linear;
+}
+
+.cloud2-storm {
+  position: absolute;
+  top: 23%;
+  left: 55%;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(105, 112, 114);
+  animation: flash 1.5s infinite linear, move 3s infinite linear;
+}
+
+.cloud3-storm {
+  position: absolute;
+  top: 3%;
+  left: 40%;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(105, 112, 114);
+  z-index: -1;
+  animation: flash 1s infinite linear, move 3s infinite linear;
+}
+
+.cloudr {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(141, 203, 236);
+  box-shadow: 1px 1px 30px rgba(84, 110, 122, 1);
+}
+
+.fog {
+  position: absolute;
+  top: 33%;
+  left: 25%;
+  width: 60px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: rgb(208, 208, 208);
+  animation: move 3s infinite linear;
+}
+
+.fog2 {
+  position: absolute;
+  top: 23%;
+  left: 55%;
+  width: 60px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: rgb(208, 208, 208);
+  animation: move 3s infinite linear;
+}
+
+.fog3 {
+  position: absolute;
+  top: 15%;
+  left: 16%;
+  width: 60px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: rgb(208, 208, 208);
+  animation: move 3s infinite linear;
+}
+
+.fog4 {
+  position: absolute;
+  top: 25%;
+  right: 55%;
+  width: 60px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: rgb(208, 208, 208);
+  animation: move 3s infinite linear;
+}
+
+.rainy li {
+  position: absolute;
+  list-style: none;
+  width: 2px;
+  height: 7px;
+  border-radius: 10%;
+  background-color: #eee;
+  opacity: 0;
+  animation: fall 3s infinite linear;
+  transform: rotate(25deg);
+}
+
+.rainy li:nth-child(1) {
+  top: 40%;
+  left: 85%;
+}
+
+.rainy li:nth-child(2) {
+  top: 35%;
+  left: 73%;
+  animation-delay: 0.3s;
+}
+
+.rainy li:nth-child(3) {
+  top: 34%;
+  left: 77%;
+  animation-delay: 0.6s;
+}
+
+.rainy li:nth-child(4) {
+  top: 45%;
+  left: 60%;
+  animation-delay: 1s;
+}
+
+.rainy li:nth-child(5) {
+  top: 40%;
+  left: 65%;
+}
+
+.breezy {
+  position: absolute;
+  background: linear-gradient(
+    to top right,
+    rgba(156, 204, 101, 1) 0%,
+    rgba(38, 198, 218, 1) 50%
+  );
+  box-shadow: 1px 1px 30px rgba(38, 198, 218, 1);
+}
+
+.breezy li {
+  position: absolute;
+  list-style: none;
+  width: 2px;
+  height: 7px;
+  border-radius: 10%;
+  background-color: #eee;
+  opacity: 0;
+  animation: fall 3s infinite linear;
+  transform: rotate(25deg);
+}
+
+.breezy li:nth-child(1) {
+  top: 10%;
+  left: 95%;
+}
+
+.breezy li:nth-child(2) {
+  top: 5%;
+  left: 83%;
+  animation-delay: 0.3s;
+}
+
+.breezy li:nth-child(3) {
+  top: 4%;
+  left: 87%;
+  animation-delay: 0.6s;
+}
+
+.breezy li:nth-child(4) {
+  top: 15%;
+  left: 70%;
+  animation-delay: 1s;
+}
+
+.breezy li:nth-child(5) {
+  top: 10%;
+  left: 75%;
+}
+
+.stormy {
+  position: absolute;
+  background: linear-gradient(
+    to top right,
+    rgb(33, 33, 33, 1) 0%,
+    rgb(171, 171, 171) 90%
+  );
+  box-shadow: 1px 1px 30px rgba(33, 33, 33, 1);
+}
+
+.stormy li {
+  position: absolute;
+  list-style: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #777;
+  box-shadow: 1px 1px 30px #555;
+  animation: fall 3s infinite linear;
+  opacity: 0;
+}
+
+.stormy li:nth-child(1) {
+  top: 0%;
+  left: 100%;
+}
+
+.stormy li:nth-child(2) {
+  top: 5%;
+  left: 90%;
+}
+
+.stormy li:nth-child(3) {
+  top: -10%;
+  left: 80%;
+  animation-delay: 2s;
+}
+
+.stormy li:nth-child(4) {
+  top: 10%;
+  left: 100%;
+  animation-delay: 2s;
+}
+
+.stormy li:nth-child(5) {
+  top: 20%;
+  left: 80%;
+  animation-delay: 0.5s;
+}
+
+.stormy li:nth-child(6) {
+  top: 35%;
+  left: 70%;
+  background-color: #bbb;
+  animation-delay: 0.5s;
+}
+
+.stormy li:nth-child(7) {
+  top: 23%;
+  left: 60%;
+  background-color: #bbb;
+  animation-delay: 0.8s;
+}
+
+.stormy li:nth-child(8) {
+  top: 5%;
+  left: 70%;
+  background-color: #bbb;
+  animation-delay: 0.8s;
+}
+
+.snowe {
+  position: absolute;
+  top: 75%;
+  left: -10%;
+  width: 40px;
+  height: 40px;
+  border-radius: 60px;
+  background-color: #ddd;
+  z-index: -1;
+  animation: move 3s infinite linear;
+}
+
+.snowex {
+  position: absolute;
+  top: 65%;
+  left: 0%;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #bbb;
+  z-index: -1;
+  animation: move 3s infinite linear;
+}
+
+.stick {
+  position: absolute;
+  top: 75%;
+  left: -10%;
+  width: 3px;
+  height: 20px;
+  transform: rotate(-45deg);
+  background-color: #333;
+  z-index: -10;
+  animation: move 3s infinite linear;
+}
+
+.stick2 {
+  position: absolute;
+  top: 75%;
+  left: 18.5%;
+  width: 3px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: #333;
+  z-index: -10;
+  animation: move 3s infinite linear;
+}
+
+/*=============== KEYFRAMES ===============*/
+
+@keyframes inex {
+  50% {
+    opacity: 0.4;
+  }
+
+  60% {
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  50% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes fall {
+  10% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-10px, 30px);
+  }
+
+  100% {
+    transform: translate(-25px, 70px);
+  }
+}
+
+@keyframes flash {
+  48% {
+    background-color: rgba(96, 125, 139, 1);
+  }
+
+  50% {
+    background-color: #fff;
+  }
+
+  55% {
+    background-color: rgba(96, 125, 139, 1);
+  }
+
+  57% {
+    background-color: #fff;
+  }
+}

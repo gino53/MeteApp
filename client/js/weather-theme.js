@@ -1,4 +1,4 @@
-const toggleBtn = document.querySelector('.theme__btn');
+const toggleBtn = document.getElementById('theme_btn');
 const body = document.querySelector('body');
 let lightMode = localStorage.getItem('light-mode');
 
