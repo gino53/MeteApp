@@ -1,12 +1,13 @@
-#icon {
+#weather_icon{
   position: absolute;
-  top: -50px;
+  top: -90px;
   width: 130px;
   height: 130px;
   border-radius: 40%;
-  z-index: 120;
+  font-size: 2em;
   cursor: pointer;
   transition: 0.5s;
+  z-index: 120;
 }
 
 #temp {
@@ -25,8 +26,8 @@
   width: 130px;
   height: 130px;
   border-radius: 40%;
-  z-index: 120;
   transition: 0.5s;
+  z-index: 120;
 }
 
 .sunny:hover,

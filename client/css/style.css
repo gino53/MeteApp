@@ -16,6 +16,10 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
   background-color: #100e0e;
@@ -25,25 +29,28 @@ body {
 /*=============== HEADER ===============*/
 
 header {
+  position: absolute;
+  top: 0;
   display: flex;
   width: 100%;
+  margin-top: 1rem;
   padding: 1rem;
 }
 
 /*=============== ANIME TEXT ===============*/
 
-.container__anime {
+#anime_container {
   perspective: 1000px;
   text-align: center;
 }
 
-.container__anime h1 {
+#anime_container h1 {
   display: inline-flex;
+  font-size: 2.5em;
   transform-style: preserve-3d;
-  font-size: 4em;
 }
 
-.container__anime h1 span {
+#anime_container h1 span {
   pointer-events: none;
   transition: 0.5s;
 }
@@ -51,11 +58,12 @@ header {
 /*=============== FORM ===============*/
 
 section {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 20%;
+  width: 420px;
 }
 
 form {
@@ -126,33 +134,14 @@ form {
 
 /*=============== DATA ===============*/
 
-.container__data {
+#data_container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 420px;
-  height: 500px;
-}
-
-.info__data,
-a {
-  transition: 0.5s;
-}
-
-.info__data__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.info__data {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 2em;
+  width: 420px;
+  height: 500px;
   text-transform: capitalize;
 }
 
@@ -161,26 +150,34 @@ a {
 }
 
 #desc {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
-.container__info {
+#temp_container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 60px;
 }
 
-.data {
+#info_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.info {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin: 1rem;
 }
 
-#icon__humidity,
-#icon__wind {
+#humidity_icon,
+#wind_icon {
   width: 80px;
   height: 80px;
 }
@@ -244,8 +241,14 @@ footer {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 5px;
+  margin-bottom: 0.25rem;
   color: #fff;
+}
+
+footer span {
+  padding: 0.5rem;
+  background-image: linear-gradient(to left top, #42c3fb, #00b2fd, #009ffe, #008bfb, #0075f4, #1669f2, #2a5dee, #3b4fe9, #5149eb, #6542ec, #7639ec, #872deb);
+  border-radius: 2rem;
 }
 
 /*=============== LIGHT MODE ===============*/
@@ -254,16 +257,4 @@ body.light {
   background: url(/assets/daytime.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-/*=============== MEDIA SCREEN ===============*/
-
-@media screen and (max-width: 1024px) {
-  .container__anime {
-    top: 90px;
-  }
-
-  .container__anime h1 {
-    font-size: 4em;
-  }
 }
