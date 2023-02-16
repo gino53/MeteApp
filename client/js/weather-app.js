@@ -25,7 +25,7 @@ function setWeather(data) {
     }
 
     if (data.weather[0].main === 'Mist' || data.weather[0].main === 'Fog' || data.weather[0].main === 'Haze') {
-        link.href = 'clouds.png';
+        link.href = 'haze.png';
         document.querySelector('#weather_icon').innerHTML = '<div class= cloudy> <div id= temp></div> <span class= fog></span> <span class= fog2></span> <span class= fog3></span> <span class= fog4></span> </div>';
         document.querySelector('form').style.backgroundImage = "linear-gradient(to top, #6f6c8883, #7f7f7f53, #9c9c9ca5, #d6d6d68f)";
     }

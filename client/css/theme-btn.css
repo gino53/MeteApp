@@ -14,65 +14,22 @@
 	align-items: center;
 	width: 60px;
 	height: 60px;
-	border-radius: 0.625rem;
-	font-size: 1.5em;
 	cursor: pointer;
 	transition: 0.5s;
 }
 
 #theme_btn:hover {
-	transform: rotate(360deg);
+	transform: scale(110%);
 }
 
 #theme_btn strong {
 	position: inherit;
 	height: 36px;
 	opacity: 0;
-	transition: 0.5s;
 }
 
 #theme_btn strong:nth-child(1) {
 	opacity: 1;
-	color: #df9100;
-	animation: color-sun 5s infinite linear;
-}
-
-/*=============== KEYFRAMES ===============*/
-
-@keyframes color-sun {
-    10% {
-        color: #dfdf13;
-    }
-
-    35% {
-        color: #df9100;
-    }
-
-    70% {
-        color: #dfdf13;
-    }
-
-    100% {
-        color: #df9100;
-    }
-}
-
-@keyframes color-moon {
-    5% {
-        color: #deeaef;
-    }
-
-    35% {
-        color: #4b4453;
-    }
-
-    70% {
-        color: #deeaef;
-    }
-
-    99% {
-        color: #4b4453;
-    }
 }
 
 /*=============== LIGHT MODE ===============*/

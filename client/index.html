@@ -18,8 +18,8 @@
     <header>
         <div class="right" id="theme_btn_container">
             <div id="theme_btn">
-                <strong><span class="material-symbols-outlined">light_mode</span></strong>
-                <strong><span class="material-symbols-outlined">dark_mode</span></strong>
+                <strong><img src="light.png" alt="sun"></strong>
+                <strong><img src="dark.png" alt="moon"></strong>
             </div>
         </div>
         <div class="top" id="anime_container">
@@ -54,11 +54,11 @@
                 </div>
                 <div id="info_container">
                     <div class="info" title="Taux d'humidité">
-                        <lord-icon src="https://cdn.lordicon.com/oyclgnwc.json" trigger="loop"  colors="primary:#ffffff,secondary:#ffffff" id="humidity_icon"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/oyclgnwc.json" trigger="loop"  colors="primary:#ffffff,secondary:#ffffff" style="width:80px;height:80px"></lord-icon>
                         <h1 id="humi"></h1>
                     </div>
                     <div class="info" title="Vitesse du vent">
-                        <lord-icon src="https://cdn.lordicon.com/rvrbsoyg.json" trigger="loop"  colors="primary:#ffffff,secondary:#ffffff" id="wind_icon"></lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/rvrbsoyg.json" trigger="loop"  colors="primary:#ffffff,secondary:#ffffff" style="width:80px;height:80px"></lord-icon>
                         <h1 id="wind"></h1>
                     </div>  
                 </div>
@@ -66,7 +66,7 @@
             <div id="search_container">
                 <input type="text" placeholder="City" id="search_input">
                 <button type="submit" id="search_btn">
-                    <span class="material-symbols-outlined">travel_explore</span>
+                    <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="hover" colors="primary:#ffffff,secondary:#ffffff" style="width:48px;height:48px"></lord-icon>
                     <span id="search_btn_txt">Search</span>
                 </button>
             </div>
@@ -79,7 +79,8 @@
     </section>
     <footer class="bottom">
         <span>
-            © 2023 - Tous Droits Réservés | Icon by <a href="https://icons8.com" target="_blank" id="icons8">Icons8</a>
+            © 2023 - Tous Droits Réservés | Icon by<a href="https://icons8.com" target="_blank" id="icons8">Icons8</a>
+            <a href="https://www.linkedin.com/in/gino-castagna/" target="_blank"><img src="linkedin.png" alt="linkedin icon" id="linkedin_icon"></a>
         </span>  
     </footer>
 </body>
@@ -88,11 +89,5 @@
 <script src="/js/weather-app.js"></script>
 <script src="/js/weather-theme.js"></script>
 <script src="/js/anime-master/lib/anime.min.js"></script>
-
-<style>
-    .material-symbols-outlined {
-        font-size: 36px;
-    }
-</style>
 
 </html>

@@ -22,7 +22,9 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
-  background-color: #100e0e;
+  background: url(/assets/night.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   transition: 0.5s;
 }
 
@@ -80,6 +82,103 @@ form {
   padding: 1rem 1rem 0;
 }
 
+/*=============== BUBBLE ===============*/
+
+.bubble {
+  position: absolute;
+  border: 1px solid rgba(12, 88, 194, 0.769);
+  border-radius: 50%;
+  background-image: linear-gradient(to left top, #42c3fb, #00b2fd, #009ffe, #008bfb, #0075f4, #1669f2, #2a5dee, #3b4fe9, #5149eb, #6542ec, #7639ec, #872deb);
+  box-shadow: 10px 10px 60px -8px rgb(121, 107, 192);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  opacity: 0.7;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+#bubble-1 {
+  width: 130px;
+  height: 130px;
+  top: -30px;
+  right: -30px;
+}
+
+#bubble-2 {
+  width: 110px;
+  height: 110px;
+  top: 100px;
+  left: -40px;
+}
+
+#bubble-3 {
+  width: 40px;
+  height: 40px;
+  top: 190px;
+  left: 90px;
+}
+
+#bubble-4 {
+  width: 140px;
+  height: 140px;
+  bottom: 30px;
+  right: -40px;
+}
+
+#bubble-5 {
+  width: 80px;
+  height: 80px;
+  bottom: -30px;
+  right: 210px;
+}
+
+/*=============== DATA ===============*/
+
+#data_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 420px;
+  height: 500px;
+  text-transform: capitalize;
+}
+
+#city {
+  font-size: 3em;
+}
+
+#desc {
+  font-size: 2em;
+}
+
+#temp_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 60px;
+}
+
+#info_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+/*=============== SEARCH ===============*/
+
 #search_container {
   position: relative;
   display: flex;
@@ -132,107 +231,6 @@ form {
   margin-right: 0.625rem;
 }
 
-/*=============== DATA ===============*/
-
-#data_container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 420px;
-  height: 500px;
-  text-transform: capitalize;
-}
-
-#city {
-  font-size: 3em;
-}
-
-#desc {
-  font-size: 2em;
-}
-
-#temp_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 60px;
-}
-
-#info_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 40px;
-}
-
-.info {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-
-#humidity_icon,
-#wind_icon {
-  width: 80px;
-  height: 80px;
-}
-
-/*=============== BUBBLE ===============*/
-
-.bubble {
-  position: absolute;
-  border: 1px solid rgba(12, 88, 194, 0.769);
-  border-radius: 50%;
-  background-image: linear-gradient(to left top, #42c3fb, #00b2fd, #009ffe, #008bfb, #0075f4, #1669f2, #2a5dee, #3b4fe9, #5149eb, #6542ec, #7639ec, #872deb);
-  box-shadow: 10px 10px 60px -8px rgb(121, 107, 192);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  -moz-backdrop-filter: blur(10px);
-  opacity: 0.7;
-  transition: all 0.5s ease;
-  z-index: -1;
-}
-
-#bubble-1 {
-  width: 130px;
-  height: 130px;
-  top: -30px;
-  right: -30px;
-}
-
-#bubble-2 {
-  width: 110px;
-  height: 110px;
-  top: 100px;
-  left: -40px;
-}
-
-#bubble-3 {
-  width: 40px;
-  height: 40px;
-  top: 190px;
-  left: 90px;
-}
-
-#bubble-4 {
-  width: 140px;
-  height: 140px;
-  bottom: 30px;
-  right: -40px;
-}
-
-#bubble-5 {
-  width: 80px;
-  height: 80px;
-  bottom: -30px;
-  right: 210px;
-}
-
 /*=============== FOOTER ===============*/
 
 footer {
@@ -246,9 +244,26 @@ footer {
 }
 
 footer span {
+  display: flex;
+  align-items: center;
   padding: 0.5rem;
   background-image: linear-gradient(to left top, #42c3fb, #00b2fd, #009ffe, #008bfb, #0075f4, #1669f2, #2a5dee, #3b4fe9, #5149eb, #6542ec, #7639ec, #872deb);
   border-radius: 2rem;
+}
+
+#icons8 {
+  margin-left: 0.25rem;
+  transition: 0.5s;
+}
+
+#linkedin_icon {
+  margin-left: 0.625rem;
+  transition: 0.5s;
+}
+
+#icons8:hover,
+#linkedin_icon:hover {
+  transform: scale(110%);
 }
 
 /*=============== LIGHT MODE ===============*/
