@@ -57,20 +57,33 @@ function setWeather(data) {
     document.querySelector('#temp').textContent = data.main.temp + '°C';
 }
 
+function weatherError(error) {
+    console.error('There was a problem fetching weather data:', error);
+    document.querySelector('#temp').textContent = '0°C'
+    document.querySelector('#city').textContent = '';
+    document.querySelector('#desc').textContent = 'Not found';
+    document.querySelector('#min_temp').textContent = '0°C';
+    document.querySelector('#max_temp').textContent = '0°C';
+    document.querySelector('#humi').textContent = '0%';
+    document.querySelector('#wind').textContent = '0Km/H';
+}
+
 /*=============== SEARCH WEATHER ===============*/
 
 let apiCall = function (city) {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}&units=metric&lang=fr`;
-    fetch(url).then(response =>
-        response.json().then((data) => {
+
+    fetch(url)
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error('Network response was not ok.');
+        })
+        .then(data => {
             setWeather(data);
         })
-    ).catch(err => console.log('Erreur : ' + err),
-        document.querySelector('#city').textContent = '',
-        document.querySelector('#desc').textContent = 'Not found',
-        document.querySelector('#humi').textContent = '0',
-        document.querySelector('#wind').textContent = '0'
-    );
+        .catch(weatherError);
 }
 
 document.querySelector('form').addEventListener('submit', function (e) {
@@ -88,16 +101,18 @@ if (navigator.geolocation) {
         const longitude = position.coords.longitude;
 
         let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${APIKEY}&units=metric&lang=fr`;
-        fetch(url).then(response =>
-            response.json()).then(data => {
+
+        fetch(url)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response was not ok.');
+            })
+            .then(data => {
                 setWeather(data);
             })
-            .catch(err => console.log('Erreur : ' + err),
-                document.querySelector('#city').textContent = '',
-                document.querySelector('#desc').textContent = 'Not found',
-                document.querySelector('#humi').textContent = '0',
-                document.querySelector('#wind').textContent = '0'
-            );
+            .catch(weatherError);
     });
 } else {
     alert("La géolocalisation n'est pas prise en charge par votre navigateur. Veuillez entrer manuellement votre position.");
