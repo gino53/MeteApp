@@ -1,4 +1,4 @@
-const toggleBtn = document.getElementById('theme_btn');
+const toggleBtn = document.getElementById('darkmode-toggle');
 const body = document.querySelector('body');
 let lightMode = localStorage.getItem('light-mode');
 
@@ -10,7 +10,6 @@ const enableLightMode = () => {
 const disableLightMode = () => {
     body.classList.remove('light');
     localStorage.setItem('light-mode', 'disabled');
-
 };
 
 if (lightMode === 'enabled') {
