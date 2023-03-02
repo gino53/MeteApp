@@ -28,6 +28,12 @@ body {
   transition: 0.5s;
 }
 
+body.light {
+  background: url(/assets/daytime.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 ::selection {
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -39,8 +45,14 @@ header {
   top: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  background-color: rgba(64, 64, 64, 0.646);
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.light header {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*=============== ANIME TEXT ===============*/
@@ -49,16 +61,41 @@ header {
   display: flex;
   align-items: center;
   perspective: 1000px;
-  text-align: center;
 }
 
 #anime_container h1 {
   display: inline-flex;
-  font-size: 2.5em;
   transform-style: preserve-3d;
+  font-size: 2.5em;
+}
+
+#anime_container h1 strong {
+  color: whitesmoke;
+  transition: 0.5s;
+}
+
+body.light #anime_container h1 strong {
+  color: black;
 }
 
 #anime_container h1 span {
+  background: -webkit-linear-gradient(
+    #42c3fb,
+    #00b2fd,
+    #009ffe,
+    #008bfb,
+    #0075f4,
+    #1669f2,
+    #2a5dee,
+    #3b4fe9,
+    #5149eb,
+    #6542ec,
+    #7639ec,
+    #872deb
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   pointer-events: none;
   transition: 0.5s;
 }
@@ -81,7 +118,7 @@ form {
   -webkit-backdrop-filter: blur(4px);
 }
 
-#time_container{
+#time_container {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -186,7 +223,21 @@ form {
   position: absolute;
   border: 1px solid rgba(12, 88, 194, 0.769);
   border-radius: 50%;
-  background-image: linear-gradient(to left top, #42c3fb, #00b2fd, #009ffe, #008bfb, #0075f4, #1669f2, #2a5dee, #3b4fe9, #5149eb, #6542ec, #7639ec, #872deb);
+  background: linear-gradient(
+    to left top,
+    #42c3fb,
+    #00b2fd,
+    #009ffe,
+    #008bfb,
+    #0075f4,
+    #1669f2,
+    #2a5dee,
+    #3b4fe9,
+    #5149eb,
+    #6542ec,
+    #7639ec,
+    #872deb
+  );
   box-shadow: 10px 10px 60px -8px rgb(121, 107, 192);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -239,35 +290,56 @@ footer {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 0.5rem;
-  background-color: rgba(64, 64, 64, 0.646);
-  color: #fff;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-footer span {
-  display: flex;
-  align-items: center;
+body.light footer {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#credit {
+  color: whitesmoke;
+  transition: 0.5s;
+}
+
+body.light #credit {
+  color: black;
 }
 
 #icons8 {
   margin-left: 0.25rem;
+  color: whitesmoke;
   transition: 0.5s;
+}
+
+body.light #icons8 {
+  color: black;
+}
+
+#icons8:hover {
+  color: greenyellow;
+}
+
+#github_icon {
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  transform: scale(110%);
+  transition: 0.5s;
+}
+
+#github_icon:hover {
+  transform: scale(120%);
 }
 
 #linkedin_icon {
-  margin-left: 0.625rem;
+  position: absolute;
+  right: 10px;
+  top: 10px;
   transition: 0.5s;
 }
 
-#icons8:hover,
 #linkedin_icon:hover {
   transform: scale(110%);
-}
-
-/*=============== LIGHT MODE ===============*/
-
-body.light {
-  background: url(/assets/daytime.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
