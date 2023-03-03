@@ -13,43 +13,43 @@ function setWeather(data) {
     document.querySelector('#wind').textContent = data.wind.speed + 'Km/h';
 
     if (data.weather[0].main === 'Clear') {
-        link.href = 'clear.png';
+        link.href = '/images/clear.png';
         document.querySelector('#weather_icon').innerHTML = '<div class= sunny> <div id= temp></div> <span class= sun></span> <span class= sunx></span> </div>';
         document.querySelector('form').style.backgroundImage = "linear-gradient(to top, #4885ff51, #4885ff51, #d49b0077, #e96b043b)";
     }
 
     if (data.weather[0].main === 'Clouds') {
-        link.href = 'clouds.png';
+        link.href = '/images/clouds.png';
         document.querySelector('#weather_icon').innerHTML = '<div class= cloudy> <div id= temp></div> <span class= cloud></span> <span class= cloud2></span> <span class= cloud3></span> </div>';
         document.querySelector('form').style.backgroundImage = "linear-gradient(to top, #20212351, #48494b22, #7575763b, #d6d6d631)";
     }
 
     if (data.weather[0].main === 'Mist' || data.weather[0].main === 'Fog' || data.weather[0].main === 'Haze') {
-        link.href = 'haze.png';
+        link.href = '/images/haze.png';
         document.querySelector('#weather_icon').innerHTML = '<div class= cloudy> <div id= temp></div> <span class= fog></span> <span class= fog2></span> <span class= fog3></span> <span class= fog4></span> </div>';
         document.querySelector('form').style.backgroundImage = "linear-gradient(to top, #6f6c8883, #7f7f7f53, #9c9c9ca5, #d6d6d68f)";
     }
 
     if (data.weather[0].main === 'Drizzle') {
-        link.href = 'drizzle.png';
+        link.href = '/images/drizzle.png';
         document.querySelector('#weather_icon').innerHTML = '<div class= breezy> <div id= temp></div> <ul> <li></li> <li></li> <li></li> <li></li> <li></li> </ul> <span class= cloudr></span>';
         document.querySelector('form').style.backgroundImage = "linear-gradient(to top, #0941b051, #2686ec22, #08d3ee3b, #0ecc3131)";
     }
 
     if (data.weather[0].main === 'Rain') {
-        link.href = 'rain.png';
+        link.href = '/images/rain.png';
         document.querySelector('#weather_icon').innerHTML = '<div class= rainy> <div id= temp></div> <span class= cloud></span> <span class= cloud2></span> <ul> <li></li> <li></li> <li></li> <li></li> <li></li> </ul> </div>';
         document.querySelector('form').style.backgroundImage = "linear-gradient(to top, #4885ff51, #3c67bc51, #9a97973b, #25231c86)";
     }
 
     if (data.weather[0].main === 'Snow') {
-        link.href = 'snow.png';
+        link.href = '/images/snow.png';
         document.querySelector('#weather_icon').innerHTML = '<div class= stormy> <div id= temp></div> <ul> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> <li></li> </ul> <span class= snowe></span> <span class= snowex></span> <span class= stick></span> <span class= stick2></span> </div>';
         document.querySelector('form').style.backgroundImage = "linear-gradient(to top, #ffffffb6, #d6d6d651, #9a97973b, #25231c86)";
     }
 
     if (data.weather[0].main === 'Thunderstorm') {
-        link.href = 'thunderstorm.png';
+        link.href = '/images/thunderstorm.png';
         document.querySelector('#weather_icon').innerHTML = '<div class= cloudy> <div id= temp></div> <span class= cloud-storm></span> <span class= cloud2-storm></span> <span class= cloud3-storm></span> </div>';
         document.querySelector('form').style.backgroundImage = "linear-gradient(to top, #2a2a2ab6, #51515151, #e9c3043b, #32280086)";
     }

@@ -1,5 +1,5 @@
-@import "./theme-btn.css";
-@import "./weather-icon.css";
+@import "theme-btn.css";
+@import "weather-icon.css";
 
 /*=============== GENERAL ===============*/
 
@@ -22,14 +22,14 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
-  background: url(/assets/night.jpg);
+  background: url(/images/theme/dark-mode.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   transition: 0.5s;
 }
 
 body.light {
-  background: url(/assets/daytime.jpg);
+  background: url(/images/theme/light-mode.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -318,6 +318,10 @@ body.light #icons8 {
 }
 
 #icons8:hover {
+  color: greenyellow;
+}
+
+body.light #icons8:hover {
   color: greenyellow;
 }
 

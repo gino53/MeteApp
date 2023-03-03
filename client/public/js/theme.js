@@ -6,15 +6,15 @@ let lightMode = localStorage.getItem('light-mode');
 
 const enableLightMode = () => {
     body.classList.add('light');
-    linkedin.src = ('/linkedin-black.png');
-    github.src = ('/github-black.png');
+    linkedin.src = ('/images/linkedin-black.png');
+    github.src = ('/images/github-black.png');
     localStorage.setItem('light-mode', 'enabled');
 };
 
 const disableLightMode = () => {
     body.classList.remove('light');
-    linkedin.src = ('/linkedin.png');
-    github.src = ('/github.png');
+    linkedin.src = ('/images/linkedin.png');
+    github.src = ('/images/github.png');
     localStorage.setItem('light-mode', 'disabled');
 };
 
