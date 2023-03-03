@@ -2,31 +2,31 @@ const toggleBtn = document.getElementById('darkmode_toggle');
 const body = document.querySelector('body');
 const github = document.getElementById('github_icon');
 const linkedin = document.getElementById('linkedin_icon');
-let lightMode = localStorage.getItem('light-mode');
+let darkMode = localStorage.getItem('dark-mode');
 
-const enableLightMode = () => {
-    body.classList.add('light');
-    linkedin.src = ('/images/linkedin-black.png');
-    github.src = ('/images/github-black.png');
-    localStorage.setItem('light-mode', 'enabled');
-};
-
-const disableLightMode = () => {
-    body.classList.remove('light');
+const enableDarkMode = () => {
+    body.classList.add('dark');
     linkedin.src = ('/images/linkedin.png');
     github.src = ('/images/github.png');
-    localStorage.setItem('light-mode', 'disabled');
+    localStorage.setItem('dark-mode', 'enabled');
 };
 
-if (lightMode === 'enabled') {
-    enableLightMode();
+const disableDarkMode = () => {
+    body.classList.remove('dark');
+    linkedin.src = ('/images/linkedin-black.png');
+    github.src = ('/images/github-black.png');
+    localStorage.setItem('dark-mode', 'disabled');
+};
+
+if (darkMode === 'enabled') {
+    enableDarkMode();
 }
 
 toggleBtn.addEventListener('click', (e) => {
-    lightMode = localStorage.getItem('light-mode');
-    if (lightMode === 'disabled') {
-        enableLightMode();
+    darkMode = localStorage.getItem('dark-mode');
+    if (darkMode === 'disabled') {
+        enableDarkMode();
     } else {
-        disableLightMode();
+        disableDarkMode();
     }
 });

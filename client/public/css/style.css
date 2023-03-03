@@ -22,14 +22,14 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
-  background: url(/images/theme/dark-mode.jpg);
+  background: url(/images/theme/light-mode.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   transition: 0.5s;
 }
 
-body.light {
-  background: url(/images/theme/light-mode.jpg);
+body.dark {
+  background: url(/images/theme/dark-mode.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -48,11 +48,11 @@ header {
   align-items: center;
   width: 100%;
   padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-body.light header {
-  background-color: rgba(255, 255, 255, 0.5);
+body.dark header {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*=============== ANIME TEXT ===============*/
@@ -70,12 +70,12 @@ body.light header {
 }
 
 #anime_container h1 strong {
-  color: whitesmoke;
+  color: black;
   transition: 0.5s;
 }
 
-body.light #anime_container h1 strong {
-  color: black;
+body.dark #anime_container h1 strong {
+  color: whitesmoke;
 }
 
 #anime_container h1 span {
@@ -291,37 +291,37 @@ footer {
   justify-content: center;
   width: 100%;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-body.light footer {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+body.dark footer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 #credit {
-  color: whitesmoke;
+  color: black;
   transition: 0.5s;
 }
 
-body.light #credit {
-  color: black;
+body.dark #credit {
+  color: whitesmoke;
 }
 
 #icons8 {
   margin-left: 0.25rem;
-  color: whitesmoke;
+  color: black;
   transition: 0.5s;
 }
 
-body.light #icons8 {
-  color: black;
+body.dark #icons8 {
+  color: whitesmoke;
 }
 
 #icons8:hover {
   color: greenyellow;
 }
 
-body.light #icons8:hover {
+body.dark #icons8:hover {
   color: greenyellow;
 }
 
